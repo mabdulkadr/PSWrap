@@ -51,6 +51,7 @@ $script:CertCaPath  = Join-Path $script:RootDir 'cert\PsWrapCert.ca.crt'
 $script:CertPfxPath = Join-Path $script:RootDir 'cert\PsWrapCert.sign.pfx'
 $script:CertPfxPass = 'PsWrapCert'
 
+# Creates a new ephemeral RSA key pair using the CAPI cryptographic provider.
 function New-CapiRsaKey {
     [CmdletBinding()]
     param([int]$KeySize = 2048)
@@ -61,6 +62,7 @@ function New-CapiRsaKey {
     return New-Object System.Security.Cryptography.RSACryptoServiceProvider($KeySize, $csp)
 }
 
+# Generates a self-signed Root CA + Code Signing certificate chain and exports as .crt/.pfx.
 function Invoke-CertSetup {
     Add-LogLine -Message '=== Certificate Setup Started ===' -Level 'INFO'
     $certDir = Split-Path $script:CertCaPath -Parent
@@ -102,6 +104,7 @@ function Invoke-CertSetup {
     return $true
 }
 
+# Signs a PE executable with Authenticode using the generated certificate.
 function Invoke-CertSign {
     param([string]$TargetExe, [switch]$TrustRoot, [string]$TimestampServer)
     if (-not (Test-Path $script:CertPfxPath) -or -not (Test-Path $script:CertCaPath)) { Add-LogLine -Message '  Certificate files not found. Run Setup first.' -Level 'ERROR'; return $false }

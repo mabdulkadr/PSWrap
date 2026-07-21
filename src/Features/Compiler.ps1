@@ -978,6 +978,7 @@ function Invoke-CompileExePS2EXE {
     $script:asyncResult = $handle
 }
 
+# Safely stops and disposes the async compilation runspace, PowerShell instance, and result handle.
 function Stop-AsyncOperation {
     try {
         if ($script:asyncPowerShell -and $script:asyncResult -and -not $script:asyncResult.IsCompleted) {
@@ -989,6 +990,7 @@ function Stop-AsyncOperation {
     $script:asyncPowerShell = $null; $script:asyncResult = $null; $script:activeRunspace = $null
 }
 
+# Scans the project folder for companion files and populates the bundle DataGrid.
 function Update-BundleFilesList {
     $src = $script:txtSrcScript.Text.Trim()
     $pdir = $script:txtProjectFolder.Text.Trim()
@@ -1021,6 +1023,7 @@ function Update-BundleFilesList {
     }
 }
 
+# Refreshes all UI labels, bundle file list, and source file size display.
 function Update-UIState {
     $src = $script:txtSrcScript.Text.Trim()
     $pdir = $script:txtProjectFolder.Text.Trim()

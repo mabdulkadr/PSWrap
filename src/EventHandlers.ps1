@@ -20,6 +20,7 @@ if ($script:ThemeToggleBtn) {
     }) | Out-Null
 }
 
+# Displays a theme-aware floating popup window with formatted help text.
 function Show-HelpPopup {
     [CmdletBinding()]
     param(
@@ -236,6 +237,7 @@ if ($script:btnProjectFolder) {
         Release-Operation
     }) | Out-Null
 }
+# Highlights the selected navigation tab and shows/hides the corresponding page panel.
 function Set-ActiveNavTab {
     [CmdletBinding()]
     param([string]$TabName)

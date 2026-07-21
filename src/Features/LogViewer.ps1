@@ -72,6 +72,7 @@ $logViewerXaml = @'
 </Window>
 '@
 
+# Opens a modal log viewer window displaying color-coded entries from the ring buffer.
 function Show-LogViewer {
     try {
         $clean = $logViewerXaml -replace '[\uFEFF\u200B\u200C\u200D\u200E\u200F\u202A-\u202E]', ''
