@@ -39,6 +39,7 @@
     Saved automatically on application close and loaded on startup.
 #>
 
+# Serializes user preferences to JSON and writes to the settings file.
 function Save-UserSettings {
     [CmdletBinding()]
     param([Parameter(Mandatory)][hashtable]$Settings)
@@ -49,6 +50,7 @@ function Save-UserSettings {
     } catch { Add-LogLine -Message "Failed to save settings: $($_.Exception.Message)" -Level 'WARNING' }
 }
 
+# Deserializes and returns user preferences from the JSON settings file.
 function Load-UserSettings {
     [CmdletBinding()]
     param()

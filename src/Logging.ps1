@@ -47,6 +47,7 @@ if (-not $script:LogEntries) {
     $script:LogEntries    = New-Object System.Collections.ArrayList
 }
 
+# Creates the log directory and opens a StreamWriter for appending to the daily log file.
 function Initialize-FileLog {
     try {
         $logDir = $script:LogDir
@@ -58,6 +59,7 @@ function Initialize-FileLog {
     } catch { Write-Debug "Initialize-FileLog failed: $_"; $script:LogFileWriter = $null }
 }
 
+# Writes a single timestamped and leveled log entry to the file-based log writer.
 function Write-FileLog {
     param([string]$Timestamp, [string]$Level, [string]$Message)
     try {
@@ -67,6 +69,7 @@ function Write-FileLog {
     } catch { Write-Debug "Write-FileLog failed: $_" }
 }
 
+# Primary logging API — creates a log entry with color, adds to ring buffer, writes to file.
 function Add-LogLine {
     [CmdletBinding()]
     param(
@@ -102,11 +105,13 @@ function Add-LogLine {
     }
 }
 
+# Initializes the file log and writes the application startup banner.
 function Initialize-LogFile {
     Initialize-FileLog
     Add-LogLine -Message "=== $script:ToolName v$script:AppVersion Started ===" -Level 'INFO'
 }
 
+# Writes the shutdown banner and disposes the log file stream writer.
 function Close-LogFile {
     Add-LogLine -Message "=== $script:ToolName closing ===" -Level 'INFO'
     try {

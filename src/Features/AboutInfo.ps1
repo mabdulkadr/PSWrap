@@ -44,6 +44,7 @@
 
 $script:aboutLineCache = @{}
 
+# Opens a tabbed documentation viewer that renders markdown as WPF UI.
 function Show-AboutDialog {
     try {
         $docsDir = Join-Path $script:RootDir 'docs'

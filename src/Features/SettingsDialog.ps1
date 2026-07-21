@@ -42,6 +42,7 @@
     - Changes are only committed on OK; Cancel discards all edits
 #>
 
+# Parses a .ps1 file's comment-based header to extract Title, Version, Description, and Author.
 function Get-ScriptMetadata {
     [CmdletBinding()]
     param([Parameter(Mandatory)][string]$FilePath)
@@ -71,6 +72,7 @@ function Get-ScriptMetadata {
     return $result
 }
 
+# Opens a theme-aware modal WPF dialog for editing advanced build settings.
 function Show-SettingsDialog {
     try {
         $isDark = $script:IsDarkMode
