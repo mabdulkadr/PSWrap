@@ -1,0 +1,13 @@
+$script:ToolName    = 'PSWrap'
+$script:AppVersion  = '1.0.0'
+$script:AppAuthor   = 'm.abdelkader'
+$script:AppRepo     = 'https://github.com/mabdulkadr/PSWrap'
+$script:RootDir     = Resolve-Path (Join-Path $PSScriptRoot '..')
+$script:LogDir      = Join-Path $script:RootDir 'logs'
+$script:LogFilePath = Join-Path $script:LogDir "${script:ToolName}_$(Get-Date -Format 'yyyyMMdd').log"
+$script:XamlDir     = Join-Path $script:RootDir 'xaml'
+$script:SrcDir      = Join-Path $script:RootDir 'src'
+$script:FeaturesDir = Join-Path $script:SrcDir 'Features'
+$script:ConfigDir   = $PSScriptRoot
+$script:AppDataDir   = Join-Path $env:APPDATA $script:ToolName
+$script:SettingsPath = Join-Path $script:AppDataDir 'settings.json'

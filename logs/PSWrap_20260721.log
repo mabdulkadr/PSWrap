@@ -1,0 +1,605 @@
+﻿08:42:25 [INFO   ] === PSWrap v1.0.0 Started ===
+08:43:31 [INFO   ] All input fields have been reset
+08:43:37 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main
+08:43:37 [INFO   ] Auto-detected script: IntuneWin Utility.ps1
+08:43:42 [INFO   ] Compilation process initiated...
+08:43:42 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.ps1
+08:43:42 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.exe
+08:43:42 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main
+08:43:42 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+08:43:42 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+08:43:42 [INFO   ] [~] PS2EXE bundling 4 file(s)...
+08:43:42 [INFO   ] [+] Bundle created: 4 file(s), total 227373 bytes
+08:43:42 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+08:43:42 [INFO   ] [+] PS2EXE C# wrapper generated (22162 chars)
+08:43:42 [SUCCESS] Image converted to ICO: app-icon.png -> tmpolu2i0.ico
+08:43:45 [INFO   ] ============================================
+08:43:45 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+08:43:45 [INFO   ] ============================================
+08:43:45 [INFO   ] [~] Reading source script...
+08:43:45 [INFO   ] [+] Source: IntuneWin Utility.ps1 (42132 bytes)
+08:43:45 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+08:43:45 [INFO   ] [~] Resolved 5 reference assemblies
+08:43:45 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmpolu2i0.ico
+08:43:45 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpolu2i0.ico"
+08:43:45 [INFO   ] [~] Embedded bundle: tmpifxiw0.bundle (303238 bytes)
+08:43:45 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+08:43:45 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+08:43:45 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+08:43:45 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpolu2i0.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpgvpxnx.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.ps1","IntuneWin Utility.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpifxiw0.bundle","tmpifxiw0.bundle"
+08:43:45 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+08:43:45 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.exe
+08:43:45 [INFO   ] Size: 502.00 KB
+08:43:45 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.exe
+08:46:30 [INFO   ] All input fields have been reset
+08:46:49 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main
+08:46:49 [INFO   ] Auto-detected script: IntuneWin Utility.ps1
+08:46:54 [INFO   ] Converting image to ICO format...
+08:46:54 [SUCCESS] Image converted to ICO: microsoft-intune.png -> tmpocfgya.ico
+08:46:54 [SUCCESS] Converted to .ico: tmpocfgya.ico
+08:46:55 [INFO   ] Compilation process initiated...
+08:46:55 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.ps1
+08:46:55 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.exe
+08:46:55 [INFO   ] Icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmpocfgya.ico
+08:46:55 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main
+08:46:55 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+08:46:55 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+08:46:55 [INFO   ] [~] PS2EXE bundling 4 file(s)...
+08:46:56 [INFO   ] [+] Bundle created: 4 file(s), total 227373 bytes
+08:46:56 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+08:46:56 [INFO   ] [+] PS2EXE C# wrapper generated (22162 chars)
+08:46:56 [SUCCESS] Image converted to ICO: app-icon.png -> tmp2yzogs.ico
+08:46:57 [INFO   ] ============================================
+08:46:57 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+08:46:57 [INFO   ] ============================================
+08:46:57 [INFO   ] [~] Reading source script...
+08:46:57 [INFO   ] [+] Source: IntuneWin Utility.ps1 (42132 bytes)
+08:46:57 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+08:46:57 [INFO   ] [~] Resolved 5 reference assemblies
+08:46:57 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmpocfgya.ico
+08:46:57 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpocfgya.ico"
+08:46:57 [INFO   ] [~] Embedded bundle: tmppdtjzk.bundle (303238 bytes)
+08:46:57 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+08:46:57 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+08:46:57 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+08:46:57 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpocfgya.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpphlzra.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.ps1","IntuneWin Utility.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmppdtjzk.bundle","tmppdtjzk.bundle"
+08:46:57 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+08:46:57 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.exe
+08:46:57 [INFO   ] Size: 394.50 KB
+08:46:57 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.exe
+08:47:25 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.exe
+08:47:26 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\Gui Tools\IntuneWin-Utility-main\IntuneWin Utility.exe ===
+08:47:27 [INFO   ] Loading certificate...
+08:47:27 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+08:47:27 [INFO   ] Importing CA to Intermediate store...
+08:47:27 [INFO   ] Signing...
+08:47:31 [SUCCESS] Signing completed.
+08:47:31 [INFO   ] Signature status: Valid
+08:47:31 [SUCCESS] CA trusted.
+08:47:32 [INFO   ] Signature status after trust: Valid
+08:47:32 [SUCCESS] === Signing Complete ===
+08:53:43 [INFO   ] Application closing. Releasing resources...
+08:53:43 [INFO   ] === PSWrap closing ===
+08:56:32 [INFO   ] === PSWrap v1.0.0 Started ===
+08:56:39 [INFO   ] All input fields have been reset
+08:56:48 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap
+08:56:48 [INFO   ] Auto-detected script: PSWrap.ps1
+08:56:52 [INFO   ] Compilation process initiated...
+08:56:52 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.ps1
+08:56:52 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+08:56:52 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap
+08:56:52 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+08:56:52 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+08:56:52 [INFO   ] [~] PS2EXE bundling 41 file(s)...
+08:56:52 [INFO   ] [+] Bundle created: 41 file(s), total 1335064 bytes
+08:56:52 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+08:56:52 [INFO   ] [+] PS2EXE C# wrapper generated (22118 chars)
+08:56:53 [SUCCESS] Image converted to ICO: app-icon.png -> tmphqav3l.ico
+08:56:54 [INFO   ] ============================================
+08:56:54 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+08:56:54 [INFO   ] ============================================
+08:56:54 [INFO   ] [~] Reading source script...
+08:56:54 [INFO   ] [+] Source: PSWrap.ps1 (2390 bytes)
+08:56:54 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+08:56:54 [INFO   ] [~] Resolved 5 reference assemblies
+08:56:54 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmphqav3l.ico
+08:56:54 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmphqav3l.ico"
+08:56:54 [INFO   ] [~] Embedded bundle: tmppfitww.bundle (1781873 bytes)
+08:56:54 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+08:56:54 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+08:56:54 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+08:56:54 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmphqav3l.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpungmkk.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmppfitww.bundle","tmppfitww.bundle"
+08:56:54 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+08:56:54 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+08:56:54 [INFO   ] Size: 1.86 MB
+08:56:54 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+08:57:01 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+08:57:02 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe ===
+08:57:03 [INFO   ] Loading certificate...
+08:57:03 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+08:57:03 [INFO   ] Importing CA to Intermediate store...
+08:57:03 [INFO   ] Signing...
+08:57:05 [SUCCESS] Signing completed.
+08:57:06 [INFO   ] Signature status: Valid
+08:57:06 [SUCCESS] CA trusted.
+08:57:06 [INFO   ] Signature status after trust: Valid
+08:57:06 [SUCCESS] === Signing Complete ===
+08:57:48 [INFO   ] All input fields have been reset
+08:58:01 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap
+08:58:01 [INFO   ] Auto-detected script: PSWrap.ps1
+08:58:23 [INFO   ] Application closing. Releasing resources...
+08:58:23 [INFO   ] === PSWrap closing ===
+08:58:52 [INFO   ] === PSWrap v1.0.0 Started ===
+08:58:56 [INFO   ] Application closing. Releasing resources...
+08:58:56 [INFO   ] === PSWrap closing ===
+09:02:10 [INFO   ] === PSWrap v1.0.0 Started ===
+09:02:12 [INFO   ] Application closing. Releasing resources...
+09:02:12 [INFO   ] === PSWrap closing ===
+09:05:34 [INFO   ] === PSWrap v1.0.0 Started ===
+09:05:52 [INFO   ] All input fields have been reset
+09:05:57 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap
+09:05:57 [INFO   ] Auto-detected script: PSWrap.ps1
+09:06:02 [INFO   ] Source script: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.ps1
+09:06:07 [INFO   ] Output path: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:07:13 [INFO   ] Dark theme activated
+09:07:21 [INFO   ] Application closing. Releasing resources...
+09:07:21 [INFO   ] === PSWrap closing ===
+09:14:46 [INFO   ] === PSWrap v1.0.0 Started ===
+09:14:50 [INFO   ] Light theme activated
+09:14:52 [INFO   ] All input fields have been reset
+09:14:57 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap
+09:14:57 [INFO   ] Auto-detected script: PSWrap.ps1
+09:17:41 [INFO   ] Build settings updated
+09:17:49 [INFO   ] Application closing. Releasing resources...
+09:17:49 [INFO   ] === PSWrap closing ===
+09:22:08 [INFO   ] === PSWrap v1.0.0 Started ===
+09:24:46 [INFO   ] Build settings updated
+09:24:50 [INFO   ] Compilation process initiated...
+09:24:50 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.ps1
+09:24:50 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:24:50 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap
+09:24:50 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+09:24:50 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+09:24:50 [INFO   ] [~] PS2EXE bundling 41 file(s)...
+09:24:50 [INFO   ] [+] Bundle created: 41 file(s), total 1335064 bytes
+09:24:50 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+09:24:50 [INFO   ] [+] PS2EXE C# wrapper generated (22118 chars)
+09:24:50 [SUCCESS] Image converted to ICO: app-icon.png -> tmpzs41q1.ico
+09:24:53 [INFO   ] ============================================
+09:24:53 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+09:24:53 [INFO   ] ============================================
+09:24:53 [INFO   ] [~] Reading source script...
+09:24:53 [INFO   ] [+] Source: PSWrap.ps1 (2390 bytes)
+09:24:53 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+09:24:53 [INFO   ] [~] Resolved 5 reference assemblies
+09:24:53 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmpzs41q1.ico
+09:24:53 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpzs41q1.ico"
+09:24:53 [INFO   ] [~] Embedded bundle: tmpblahg5.bundle (1781873 bytes)
+09:24:53 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+09:24:53 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+09:24:53 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+09:24:53 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpzs41q1.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmp4asnlw.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpblahg5.bundle","tmpblahg5.bundle"
+09:24:53 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+09:24:53 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:24:53 [INFO   ] Size: 1.86 MB
+09:24:53 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:25:02 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:26:28 [INFO   ] Application closing. Releasing resources...
+09:26:28 [INFO   ] === PSWrap closing ===
+09:27:38 [INFO   ] === PSWrap v1.0.0 Started ===
+09:27:45 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:27:46 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe ===
+09:27:46 [INFO   ] Loading certificate...
+09:27:46 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+09:27:46 [INFO   ] Importing CA to Intermediate store...
+09:27:47 [INFO   ] Signing...
+09:27:49 [SUCCESS] Signing completed.
+09:27:50 [INFO   ] Signature status: Valid
+09:27:50 [SUCCESS] CA trusted.
+09:27:50 [INFO   ] Signature status after trust: Valid
+09:27:50 [SUCCESS] === Signing Complete ===
+09:34:20 [INFO   ] Application closing. Releasing resources...
+09:34:20 [INFO   ] === PSWrap closing ===
+09:34:35 [INFO   ] === PSWrap v1.0.0 Started ===
+09:34:40 [INFO   ] All input fields have been reset
+09:34:42 [INFO   ] Application closing. Releasing resources...
+09:34:42 [INFO   ] === PSWrap closing ===
+09:35:15 [INFO   ] === PSWrap v1.0.0 Started ===
+09:35:23 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap
+09:35:23 [INFO   ] Auto-detected script: PSWrap.ps1
+09:35:52 [INFO   ] Build settings updated
+09:35:55 [INFO   ] Compilation process initiated...
+09:35:55 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.ps1
+09:35:55 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:35:55 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap
+09:35:55 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+09:35:55 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+09:35:55 [INFO   ] [~] PS2EXE bundling 42 file(s)...
+09:35:55 [INFO   ] [+] Bundle created: 42 file(s), total 1372075 bytes
+09:35:55 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+09:35:55 [INFO   ] [+] PS2EXE C# wrapper generated (22118 chars)
+09:35:55 [SUCCESS] Image converted to ICO: app-icon.png -> tmptd0v3j.ico
+09:35:57 [INFO   ] ============================================
+09:35:57 [INFO   ] ============================================
+09:35:57 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+09:35:57 [INFO   ] ============================================
+09:35:57 [INFO   ] [~] Reading source script...
+09:35:57 [INFO   ] [+] Source: PSWrap.ps1 (2445 bytes)
+09:35:57 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+09:35:57 [INFO   ] [~] Resolved 5 reference assemblies
+09:35:57 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmptd0v3j.ico
+09:35:57 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmptd0v3j.ico"
+09:35:57 [INFO   ] [~] Embedded bundle: tmpmsiyw3.bundle (1831262 bytes)
+09:35:57 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+09:35:57 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+09:35:57 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+09:35:57 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmptd0v3j.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpzzvmoe.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpmsiyw3.bundle","tmpmsiyw3.bundle"
+09:35:57 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+09:35:57 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:35:57 [INFO   ] Size: 1.91 MB
+09:35:57 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:35:57 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+09:35:57 [INFO   ] ============================================
+09:35:57 [INFO   ] [~] Reading source script...
+09:35:57 [INFO   ] [+] Source: PSWrap.ps1 (2445 bytes)
+09:35:57 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+09:35:57 [INFO   ] [~] Resolved 5 reference assemblies
+09:35:57 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmptd0v3j.ico
+09:35:57 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmptd0v3j.ico"
+09:35:57 [INFO   ] [~] Embedded bundle: tmpmsiyw3.bundle (1831262 bytes)
+09:35:57 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+09:35:57 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+09:35:57 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+09:35:57 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmptd0v3j.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpzzvmoe.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpmsiyw3.bundle","tmpmsiyw3.bundle"
+09:35:57 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+09:35:57 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:35:57 [INFO   ] Size: 1.91 MB
+09:35:57 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:36:03 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+09:36:04 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe ===
+09:36:04 [INFO   ] Loading certificate...
+09:36:05 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+09:36:05 [INFO   ] Importing CA to Intermediate store...
+09:36:05 [INFO   ] Signing...
+09:36:07 [SUCCESS] Signing completed.
+09:36:07 [INFO   ] Signature status: Valid
+09:36:07 [SUCCESS] CA trusted.
+09:36:08 [INFO   ] Signature status after trust: Valid
+09:36:08 [SUCCESS] === Signing Complete ===
+09:38:54 [INFO   ] Application closing. Releasing resources...
+09:38:54 [INFO   ] === PSWrap closing ===
+09:48:44 [INFO   ] === PSWrap v1.0.0 Started ===
+09:48:57 [INFO   ] All input fields have been reset
+09:49:03 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main
+09:49:03 [INFO   ] Auto-detected script: Windows-11-Upgrade-Assistant-v1.1.ps1
+09:49:03 [INFO   ] Auto-detected icon: windows-11.ico
+09:49:05 [INFO   ] Compilation process initiated...
+09:49:05 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1
+09:49:05 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:49:05 [INFO   ] Icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+09:49:05 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main
+09:49:06 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+09:49:06 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+09:49:06 [INFO   ] [~] PS2EXE bundling 3 file(s)...
+09:49:06 [INFO   ] [+] Bundle created: 3 file(s), total 491815 bytes
+09:49:06 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+09:49:06 [INFO   ] [+] PS2EXE C# wrapper generated (22226 chars)
+09:49:06 [SUCCESS] Image converted to ICO: app-icon.png -> tmpuqmur0.ico
+09:49:08 [INFO   ] ============================================
+09:49:08 [INFO   ] ============================================
+09:49:08 [INFO   ] ============================================
+09:49:08 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+09:49:08 [INFO   ] ============================================
+09:49:08 [INFO   ] [~] Reading source script...
+09:49:08 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+09:49:08 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+09:49:08 [INFO   ] [~] Resolved 5 reference assemblies
+09:49:08 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+09:49:08 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+09:49:08 [INFO   ] [~] Embedded bundle: tmpwpz4h2.bundle (655802 bytes)
+09:49:08 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+09:49:08 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+09:49:08 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+09:49:08 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpnhxtcj.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpwpz4h2.bundle","tmpwpz4h2.bundle"
+09:49:08 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+09:49:08 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:49:08 [INFO   ] Size: 1.08 MB
+09:49:08 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:49:08 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+09:49:08 [INFO   ] ============================================
+09:49:08 [INFO   ] [~] Reading source script...
+09:49:08 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+09:49:08 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+09:49:08 [INFO   ] [~] Resolved 5 reference assemblies
+09:49:08 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+09:49:08 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+09:49:08 [INFO   ] [~] Embedded bundle: tmpwpz4h2.bundle (655802 bytes)
+09:49:08 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+09:49:08 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+09:49:08 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+09:49:08 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpnhxtcj.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpwpz4h2.bundle","tmpwpz4h2.bundle"
+09:49:08 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+09:49:08 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:49:08 [INFO   ] Size: 1.08 MB
+09:49:08 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:49:08 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+09:49:08 [INFO   ] ============================================
+09:49:08 [INFO   ] [~] Reading source script...
+09:49:08 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+09:49:08 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+09:49:08 [INFO   ] [~] Resolved 5 reference assemblies
+09:49:08 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+09:49:08 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+09:49:08 [INFO   ] [~] Embedded bundle: tmpwpz4h2.bundle (655802 bytes)
+09:49:08 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+09:49:08 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+09:49:08 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+09:49:08 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpnhxtcj.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpwpz4h2.bundle","tmpwpz4h2.bundle"
+09:49:08 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+09:49:08 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:49:08 [INFO   ] Size: 1.08 MB
+09:49:08 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:49:13 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:50:19 [INFO   ] Activity log cleared.
+09:50:28 [INFO   ] Application closing. Releasing resources...
+09:50:28 [INFO   ] === PSWrap closing ===
+09:56:04 [INFO   ] === PSWrap v1.0.0 Started ===
+09:56:11 [INFO   ] Compilation process initiated...
+09:56:11 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1
+09:56:11 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:56:11 [INFO   ] Icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+09:56:11 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main
+09:56:11 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+09:56:11 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+09:56:11 [INFO   ] [~] PS2EXE bundling 3 file(s)...
+09:56:11 [INFO   ] [+] Bundle created: 3 file(s), total 491815 bytes
+09:56:11 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+09:56:11 [INFO   ] [+] PS2EXE C# wrapper generated (22226 chars)
+09:56:11 [SUCCESS] Image converted to ICO: app-icon.png -> tmpv5jwvo.ico
+09:56:12 [INFO   ] ============================================
+09:56:12 [INFO   ] ============================================
+09:56:12 [INFO   ] ============================================
+09:56:12 [INFO   ] ============================================
+09:56:12 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+09:56:12 [INFO   ] ============================================
+09:56:12 [INFO   ] [~] Reading source script...
+09:56:12 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+09:56:12 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+09:56:12 [INFO   ] [~] Resolved 5 reference assemblies
+09:56:12 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+09:56:12 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+09:56:12 [INFO   ] [~] Embedded bundle: tmpewtu2v.bundle (655802 bytes)
+09:56:12 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+09:56:12 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+09:56:12 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+09:56:12 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmplw2rys.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpewtu2v.bundle","tmpewtu2v.bundle"
+09:56:12 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+09:56:12 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:56:12 [INFO   ] Size: 1.08 MB
+09:56:12 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:56:13 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+09:56:13 [INFO   ] ============================================
+09:56:13 [INFO   ] [~] Reading source script...
+09:56:13 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+09:56:13 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+09:56:13 [INFO   ] [~] Resolved 5 reference assemblies
+09:56:13 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+09:56:13 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+09:56:13 [INFO   ] [~] Embedded bundle: tmpewtu2v.bundle (655802 bytes)
+09:56:13 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+09:56:13 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+09:56:13 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+09:56:13 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmplw2rys.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpewtu2v.bundle","tmpewtu2v.bundle"
+09:56:13 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+09:56:13 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:56:13 [INFO   ] Size: 1.08 MB
+09:56:13 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:56:13 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+09:56:13 [INFO   ] ============================================
+09:56:13 [INFO   ] [~] Reading source script...
+09:56:13 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+09:56:13 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+09:56:13 [INFO   ] [~] Resolved 5 reference assemblies
+09:56:13 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+09:56:13 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+09:56:13 [INFO   ] [~] Embedded bundle: tmpewtu2v.bundle (655802 bytes)
+09:56:13 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+09:56:13 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+09:56:13 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+09:56:13 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmplw2rys.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpewtu2v.bundle","tmpewtu2v.bundle"
+09:56:13 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+09:56:13 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:56:13 [INFO   ] Size: 1.08 MB
+09:56:13 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:56:13 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+09:56:13 [INFO   ] ============================================
+09:56:13 [INFO   ] [~] Reading source script...
+09:56:13 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+09:56:13 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+09:56:13 [INFO   ] [~] Resolved 5 reference assemblies
+09:56:13 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+09:56:13 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+09:56:13 [INFO   ] [~] Embedded bundle: tmpewtu2v.bundle (655802 bytes)
+09:56:13 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+09:56:13 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+09:56:13 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+09:56:13 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmplw2rys.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpewtu2v.bundle","tmpewtu2v.bundle"
+09:56:13 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+09:56:13 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:56:13 [INFO   ] Size: 1.08 MB
+09:56:13 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:56:18 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+09:56:21 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe ===
+09:56:21 [INFO   ] Loading certificate...
+09:56:21 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+09:56:21 [INFO   ] Importing CA to Intermediate store...
+09:56:21 [INFO   ] Waiting for file to be available...
+09:56:21 [INFO   ] Signing...
+09:56:21 [SUCCESS] Signing completed.
+09:56:21 [INFO   ] Signature status: Valid
+09:56:21 [SUCCESS] CA trusted.
+09:56:22 [INFO   ] Signature status after trust: Valid
+09:56:22 [SUCCESS] === Signing Complete ===
+09:57:48 [INFO   ] Application closing. Releasing resources...
+09:57:48 [INFO   ] === PSWrap closing ===
+10:03:05 [INFO   ] === PSWrap v1.0.0 Started ===
+10:03:17 [INFO   ] All input fields have been reset
+10:03:22 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main
+10:03:22 [INFO   ] Auto-detected script: Windows-11-Upgrade-Assistant-v1.1.ps1
+10:03:22 [INFO   ] Auto-detected icon: windows-11.ico
+10:03:27 [INFO   ] Build settings updated
+10:03:29 [INFO   ] Compilation process initiated...
+10:03:29 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1
+10:03:29 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:03:29 [INFO   ] Icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+10:03:29 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main
+10:03:29 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+10:03:29 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+10:03:29 [INFO   ] [~] PS2EXE bundling 3 file(s)...
+10:03:30 [INFO   ] [+] Bundle created: 3 file(s), total 491815 bytes
+10:03:30 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+10:03:30 [INFO   ] [+] PS2EXE C# wrapper generated (21840 chars)
+10:03:30 [SUCCESS] Image converted to ICO: app-icon.png -> tmp1eodhl.ico
+10:03:32 [INFO   ] ============================================
+10:03:32 [INFO   ] ============================================
+10:03:33 [INFO   ] ============================================
+10:03:33 [INFO   ] ============================================
+10:03:33 [INFO   ] ============================================
+10:03:33 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+10:03:33 [INFO   ] ============================================
+10:03:33 [INFO   ] [~] Reading source script...
+10:03:33 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+10:03:33 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:03:33 [INFO   ] [~] Resolved 5 reference assemblies
+10:03:33 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+10:03:33 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+10:03:33 [INFO   ] [~] Embedded bundle: tmpaojsma.bundle (655802 bytes)
+10:03:33 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:03:33 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:03:33 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:03:33 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpurfxlr.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpaojsma.bundle","tmpaojsma.bundle"
+10:03:33 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:03:33 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:03:33 [INFO   ] Size: 1.08 MB
+10:03:33 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:03:33 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+10:03:33 [INFO   ] ============================================
+10:03:33 [INFO   ] [~] Reading source script...
+10:03:33 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+10:03:33 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:03:33 [INFO   ] [~] Resolved 5 reference assemblies
+10:03:33 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+10:03:33 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+10:03:33 [INFO   ] [~] Embedded bundle: tmpaojsma.bundle (655802 bytes)
+10:03:33 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:03:33 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:03:33 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:03:33 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpurfxlr.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpaojsma.bundle","tmpaojsma.bundle"
+10:03:33 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:03:33 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:03:33 [INFO   ] Size: 1.08 MB
+10:03:33 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:03:33 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+10:03:33 [INFO   ] ============================================
+10:03:33 [INFO   ] [~] Reading source script...
+10:03:33 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+10:03:33 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:03:33 [INFO   ] [~] Resolved 5 reference assemblies
+10:03:33 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+10:03:33 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+10:03:33 [INFO   ] [~] Embedded bundle: tmpaojsma.bundle (655802 bytes)
+10:03:33 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:03:33 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:03:33 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:03:33 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpurfxlr.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpaojsma.bundle","tmpaojsma.bundle"
+10:03:33 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:03:33 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:03:33 [INFO   ] Size: 1.08 MB
+10:03:33 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:03:33 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+10:03:33 [INFO   ] ============================================
+10:03:33 [INFO   ] [~] Reading source script...
+10:03:33 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+10:03:33 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:03:33 [INFO   ] [~] Resolved 5 reference assemblies
+10:03:33 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+10:03:33 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+10:03:33 [INFO   ] [~] Embedded bundle: tmpaojsma.bundle (655802 bytes)
+10:03:33 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:03:33 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:03:33 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:03:33 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpurfxlr.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpaojsma.bundle","tmpaojsma.bundle"
+10:03:33 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:03:33 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:03:33 [INFO   ] Size: 1.08 MB
+10:03:33 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:03:33 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+10:03:33 [INFO   ] ============================================
+10:03:33 [INFO   ] [~] Reading source script...
+10:03:33 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+10:03:33 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:03:33 [INFO   ] [~] Resolved 5 reference assemblies
+10:03:33 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+10:03:33 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+10:03:33 [INFO   ] [~] Embedded bundle: tmpaojsma.bundle (655802 bytes)
+10:03:33 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:03:33 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:03:33 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:03:33 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpurfxlr.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpaojsma.bundle","tmpaojsma.bundle"
+10:03:33 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:03:33 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:03:33 [INFO   ] Size: 1.08 MB
+10:03:33 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:03:40 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:04:10 [INFO   ] Application closing. Releasing resources...
+10:04:10 [INFO   ] === PSWrap closing ===
+10:04:38 [INFO   ] === PSWrap v1.0.0 Started ===
+10:04:49 [INFO   ] All input fields have been reset
+10:04:55 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main
+10:04:55 [INFO   ] Auto-detected script: Windows-11-Upgrade-Assistant-v1.1.ps1
+10:04:55 [INFO   ] Auto-detected icon: windows-11.ico
+10:04:58 [INFO   ] Build settings updated
+10:04:59 [INFO   ] Compilation process initiated...
+10:04:59 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1
+10:04:59 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:04:59 [INFO   ] Icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+10:04:59 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main
+10:04:59 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+10:04:59 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+10:04:59 [INFO   ] [~] PS2EXE bundling 3 file(s)...
+10:04:59 [INFO   ] [+] Bundle created: 3 file(s), total 491815 bytes
+10:04:59 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+10:04:59 [INFO   ] [+] PS2EXE C# wrapper generated (21840 chars)
+10:04:59 [SUCCESS] Image converted to ICO: app-icon.png -> tmpzzjboq.ico
+10:05:00 [INFO   ] ============================================
+10:05:00 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+10:05:00 [INFO   ] ============================================
+10:05:00 [INFO   ] [~] Reading source script...
+10:05:00 [INFO   ] [+] Source: Windows-11-Upgrade-Assistant-v1.1.ps1 (81790 bytes)
+10:05:00 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:05:00 [INFO   ] [~] Resolved 5 reference assemblies
+10:05:00 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico
+10:05:00 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico"
+10:05:00 [INFO   ] [~] Embedded bundle: tmpzefpx0.bundle (655802 bytes)
+10:05:00 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:05:00 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:05:00 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:05:00 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\windows-11.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpcexb05.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.ps1","Windows-11-Upgrade-Assistant-v1.1.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpzefpx0.bundle","tmpzefpx0.bundle"
+10:05:00 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:05:00 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:05:00 [INFO   ] Size: 1.08 MB
+10:05:00 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:05:06 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe
+10:05:08 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\Gui Tools\Windows-11-Upgrade-Assistant-main\Windows-11-Upgrade-Assistant-v1.1.exe ===
+10:05:08 [INFO   ] Loading certificate...
+10:05:08 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+10:05:08 [INFO   ] Importing CA to Intermediate store...
+10:05:08 [INFO   ] Waiting for file to be available...
+10:05:08 [INFO   ] Signing...
+10:05:11 [SUCCESS] Signing completed.
+10:05:11 [INFO   ] Signature status: Valid
+10:05:11 [SUCCESS] CA trusted.
+10:05:11 [INFO   ] Signature status after trust: Valid
+10:05:11 [SUCCESS] === Signing Complete ===
+10:06:19 [INFO   ] Application closing. Releasing resources...
+10:06:19 [INFO   ] === PSWrap closing ===
