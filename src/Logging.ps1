@@ -47,8 +47,16 @@ if (-not $script:LogEntries) {
     $script:LogEntries    = New-Object System.Collections.ArrayList
 }
 
-# Creates the log directory and opens a StreamWriter for appending to the daily log file.
 function Initialize-FileLog {
+    <#
+    .SYNOPSIS
+        Initializes the file-based log writer.
+    .DESCRIPTION
+        Creates the logs directory if needed and opens a StreamWriter to the
+        daily-rolling log file (PSWrap_yyyyMMdd.log) with AutoFlush enabled.
+        If initialization fails, file logging is silently disabled and
+        $script:LogFileWriter is set to $null.
+    #>
     try {
         $logDir = $script:LogDir
         if (-not (Test-Path -LiteralPath $logDir -ErrorAction SilentlyContinue)) {
@@ -59,8 +67,17 @@ function Initialize-FileLog {
     } catch { Write-Debug "Initialize-FileLog failed: $_"; $script:LogFileWriter = $null }
 }
 
-# Writes a single timestamped and leveled log entry to the file-based log writer.
 function Write-FileLog {
+    <#
+    .SYNOPSIS
+        Writes a single formatted log entry to the file log.
+    .PARAMETER Timestamp
+        Formatted timestamp string (HH:mm:ss).
+    .PARAMETER Level
+        Log level label (INFO, SUCCESS, WARNING, ERROR, DEBUG).
+    .PARAMETER Message
+        The log message text.
+    #>
     param([string]$Timestamp, [string]$Level, [string]$Message)
     try {
         if ($script:LogFileWriter) {
@@ -69,8 +86,30 @@ function Write-FileLog {
     } catch { Write-Debug "Write-FileLog failed: $_" }
 }
 
-# Primary logging API — creates a log entry with color, adds to ring buffer, writes to file.
 function Add-LogLine {
+    <#
+    .SYNOPSIS
+        Adds a log entry to the in-memory ring buffer, file log, and status bar.
+    .DESCRIPTION
+        The primary logging entry point used throughout the application. Strips
+        control characters from the message, assigns a color based on log level,
+        appends to the ring buffer (FIFO, max 1000 entries), writes to the file
+        log, and updates the status bar text via Dispatcher.
+    .PARAMETER Message
+        The log message text. Control characters are stripped automatically.
+    .PARAMETER Level
+        Log level. Valid values: INFO, SUCCESS, WARNING, ERROR, DEBUG.
+        Default: INFO. Determines the display color:
+          INFO    = Blue (#3B82F6)
+          SUCCESS = Green (#10B981)
+          WARNING = Amber (#F59E0B)
+          ERROR   = Red (#EF4444)
+          DEBUG   = Gray (#94A3B8)
+    .EXAMPLE
+        Add-LogLine -Message "Compilation started" -Level 'INFO'
+        Add-LogLine -Message "Build successful!" -Level 'SUCCESS'
+        Add-LogLine -Message "File not found: $path" -Level 'ERROR'
+    #>
     [CmdletBinding()]
     param(
         [Parameter(Mandatory)][string]$Message,
@@ -105,14 +144,20 @@ function Add-LogLine {
     }
 }
 
-# Initializes the file log and writes the application startup banner.
 function Initialize-LogFile {
+    <#
+    .SYNOPSIS
+        Initializes file logging and writes the session-start banner.
+    #>
     Initialize-FileLog
     Add-LogLine -Message "=== $script:ToolName v$script:AppVersion Started ===" -Level 'INFO'
 }
 
-# Writes the shutdown banner and disposes the log file stream writer.
 function Close-LogFile {
+    <#
+    .SYNOPSIS
+        Writes the session-end banner and closes the file log writer.
+    #>
     Add-LogLine -Message "=== $script:ToolName closing ===" -Level 'INFO'
     try {
         if ($script:LogFileWriter) { $script:LogFileWriter.Close(); $script:LogFileWriter.Dispose() }

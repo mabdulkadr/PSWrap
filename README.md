@@ -1,18 +1,13 @@
 # 📦 PSWrap — PowerShell Script to EXE Compiler
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
 ![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-blue.svg)
 ![Platform](https://img.shields.io/badge/Platform-Windows-lightgrey.svg)
 ![GUI](https://img.shields.io/badge/GUI-WPF-purple.svg)
-![Version](https://img.shields.io/badge/version-1.0.0-green.svg)
+![Version](https://img.shields.io/badge/version-1.0-green.svg)
 
 [![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-☕-FFDD00?style=for-the-badge)](https://www.buymeacoffee.com/mabdulkadrx)
 
----
-
-## 📖 Overview
-
-**PSWrap** is a modern **WPF-based GUI tool** that compiles **PowerShell scripts (.ps1)** into **native Windows executables (.exe)** using in-process C# CodeDOM compilation with `csc.exe` fallback.
+A modern **WPF-based GUI tool** that compiles **PowerShell scripts (.ps1)** into **native Windows executables (.exe)** using in-process C# CodeDOM compilation with `csc.exe` fallback.
 
 ---
 
@@ -62,10 +57,10 @@
 ## ▶️ Usage
 
 ```powershell
-powershell.exe -STA -File "PSWrap.ps1"
+powershell.exe -STA -File "Start-PSWrap.ps1"
 ```
 
-Or double-click **PSWrap.ps1** in File Explorer.
+Or double-click **Start-PSWrap.ps1** in File Explorer.
 
 ### Steps
 
@@ -81,8 +76,7 @@ Or double-click **PSWrap.ps1** in File Explorer.
 ## 🏗️ Architecture
 
 ```
-PSWrap/
-├── PSWrap.ps1           — Main entry point
+Start-PSWrap.ps1
 ├── config/              — AppConstants, settings
 ├── src/                 — Core modules
 │   ├── Environment.ps1
@@ -94,14 +88,13 @@ PSWrap/
 │   ├── Startup.ps1
 │   └── Features/
 │       ├── Compiler.ps1
-│       ├── CertSign.ps1
 │       ├── LogViewer.ps1
-│       ├── AboutInfo.ps1
-│       └── SettingsDialog.ps1
+│       └── AboutInfo.ps1
 ├── xaml/                — WPF layouts (MainWindow, LogViewer)
 ├── docs/                — Documentation
 ├── images/              — App icons
-└── cert/                — Signing certificates
+├── scripts/             — Build & deploy scripts
+└── tests/               — Pester tests
 ```
 
 ---
@@ -126,23 +119,10 @@ When selecting **Project Folder**:
 
 ---
 
-## 🐛 Troubleshooting
+## ☕ Donate
 
-| Symptom | Likely Cause | Fix |
-|---------|--------------|-----|
-| GUI doesn't appear | PowerShell not in STA mode | Run with `powershell.exe -STA -File "PSWrap.ps1"` |
-| Compilation fails | .NET Framework not installed | Install .NET Framework 4.7.2+ |
-| "csc.exe not found" | Roslyn not installed (PS 7.x fallback) | Install the Roslyn compiler or use PowerShell 5.1 |
-| Icon not embedded | Invalid image format | Use .ico file or convert from PNG/JPG/BMP/GIF |
-| Certificate signing fails | No admin rights or cert not trusted | Run as Administrator; check cert store |
-
----
-
-## ☕ Support
-
-If this project helps you, consider supporting it:
-
-[![Buy Me A Coffee](https://img.shields.io/badge/Buy%20Me%20A%20Coffee-☕-FFDD00?style=for-the-badge)](https://www.buymeacoffee.com/mabdulkadrx)
+If you find this project helpful, consider supporting it by  
+[buying me a coffee](https://www.buymeacoffee.com/mabdulkadrx).
 
 ---
 
@@ -154,10 +134,9 @@ This project is licensed under the [MIT License](https://opensource.org/licenses
 
 ## 👤 Author
 
-**Mohammad Abdulkader Omar** 
-Website: https://momar.tech 
-LinkedIn: https://www.linkedin.com/in/mabdulkadr/ 
-Version: **1.0.0** 
+**Mohammad Abdulkader Omar**  
+Website: https://momar.tech  
+Version: **1.0**
 
 ---
 

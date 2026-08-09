@@ -44,8 +44,23 @@
 
 $script:aboutLineCache = @{}
 
-# Opens a tabbed documentation viewer that renders markdown as WPF UI.
 function Show-AboutDialog {
+<#
+.SYNOPSIS
+    Opens the About / Documentation dialog with tabbed markdown content.
+
+.DESCRIPTION
+    Renders a XAML dialog window that loads ABOUT.md and USER-GUIDE.md from the
+    docs directory and converts markdown to styled WPF controls with syntax-
+    highlighted code blocks, tables, blockquotes, lists, headings with icons,
+    and inline formatting.
+
+.NOTES
+    Markdown rendering is performed by the ConvertFrom-MarkdownToUI function via
+    a state-machine parser. File contents are cached in $script:aboutLineCache to
+    avoid repeated disk reads on tab switches. DynamicResource brushes and styles
+    from the main window are inherited by the About dialog for theme consistency.
+#>
     try {
         $docsDir = Join-Path $script:RootDir 'docs'
         $tabs = @(
@@ -109,7 +124,9 @@ function Show-AboutDialog {
 
         function ConvertFrom-MarkdownToUI {
             param([string[]]$Lines, [System.Windows.Controls.StackPanel]$TargetPanel)
+            # State-machine markdown parser supporting headings, code blocks, tables, blockquotes, and inline formatting
             $inCodeBlock = $false; $codeContent = ''; $inTable = $false; $tableRows = @(); $inBlockquote = $false; $blockquoteContent = @()
+            # Map heading text to SVG Material Design icons using regex matching
             $headingIcons = @{
                 'overview'='M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5'; 'feature|capabilit'='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z'
                 'architectur|structure'='M9.4 16.6L4.8 12l4.6-4.6L8 6l-6 6 6 6 1.4-1.4zm5.2 0l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4z'; 'function|api|reference'='M14.6 16.6l4.6-4.6-4.6-4.6L16 6l6 6-6 6-1.4-1.4zM9.4 7.4L4.8 12l4.6 4.6L8 18l-6-6 6-6 1.4 1.4zm3.3-3.3l2 12-2.7.6-2-12 2.7-.6z'
@@ -143,6 +160,7 @@ function Show-AboutDialog {
                 }
                 if ($line -match '^\|[-: ]+\|') { continue }
                 if ($inTable -and -not ($line -match '^\|.*\|$')) {
+                    # Build WPF Grid with alternating row colors, header styling, and row selection
                     if ($tableRows.Count -gt 0) {
                         $cc=($tableRows|%{$_.Count}|Measure-Object -Maximum).Maximum
                         $ob=New-Object System.Windows.Controls.Border; $ob.BorderBrush=$res['TableBorder']; $ob.BorderThickness=New-Object $thick(1,1,1,1); $ob.CornerRadius=New-Object System.Windows.CornerRadius(8); $ob.Margin=New-Object $thick(0,0,0,14); $ob.Background=$res['TableBg']

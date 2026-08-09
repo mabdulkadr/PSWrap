@@ -44,15 +44,40 @@
 $SunIconData  = 'M12 7c-2.76 0-5 2.24-5 5s2.24 5 5 5 5-2.24 5-5-2.24-5-5-5zM2 13h2c.55 0 1-.45 1-1s-.45-1-1-1H2c-.55 0-1 .45-1 1s.45 1 1 1zm18 0h2c.55 0 1-.45 1-1s-.45-1-1-1h-2c-.55 0-1 .45-1 1s.45 1 1 1zM11 2v2c0 .55.45 1 1 1s1-.45 1-1V2c0-.55-.45-1-1-1s-1 .45-1 1zm0 18v2c0 .55.45 1 1 1s1-.45 1-1v-2c0-.55-.45-1-1-1s-1 .45-1 1zM5.99 4.58c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0s.39-1.03 0-1.41L5.99 4.58zm12.37 12.37c-.39-.39-1.03-.39-1.41 0-.39.39-.39 1.03 0 1.41l1.06 1.06c.39.39 1.03.39 1.41 0 .39-.39.39-1.03 0-1.41l-1.06-1.06zm1.06-10.96c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06zM7.05 18.36c.39-.39.39-1.03 0-1.41-.39-.39-1.03-.39-1.41 0l-1.06 1.06c-.39.39-.39 1.03 0 1.41s1.03.39 1.41 0l1.06-1.06z'
 $MoonIconData = 'M9 2c-1.05 0-2.05.16-3 .46 4.06 1.27 7 5.06 7 9.54 0 4.48-2.94 8.27-7 9.54.95.3 1.95.46 3 .46 5.52 0 10-4.48 10-10S14.52 2 9 2z'
 
-# Converts a hex color string to a WPF SolidColorBrush.
 function New-Brush {
+    <#
+    .SYNOPSIS
+        Creates a SolidColorBrush from a hex color string.
+    .PARAMETER Hex
+        Hex color string (e.g., '#3B82F6', '#FFFFFF'). Supports shorthand
+        notation via BrushConverter.
+    .OUTPUTS
+        System.Windows.Media.SolidColorBrush.
+    .EXAMPLE
+        $blueBrush = New-Brush '#3B82F6'
+    #>
     [CmdletBinding()]
     param([string]$Hex)
     (New-Object System.Windows.Media.BrushConverter).ConvertFromString($Hex)
 }
 
-# Prevents concurrent operations by checking/setting the busy flag.
 function Guard-Operation {
+    <#
+    .SYNOPSIS
+        Acquires the global busy lock to prevent concurrent operations.
+    .DESCRIPTION
+        Checks the global $script:isBusy flag. If the application is already
+        processing an operation, logs a warning and returns $false. Otherwise,
+        sets the flag and returns $true. Must be paired with Release-Operation.
+    .PARAMETER ActionName
+        Human-readable name of the operation being guarded (for log messages).
+    .OUTPUTS
+        Boolean. $true if the lock was acquired, $false if already busy.
+    .EXAMPLE
+        if (-not (Guard-Operation 'Compile')) { return }
+        # ... do work ...
+        Release-Operation
+    #>
     [CmdletBinding()]
     param([string]$ActionName)
     if ($script:isBusy) {
@@ -63,13 +88,33 @@ function Guard-Operation {
     return $true
 }
 
-# Clears the busy flag to allow new operations.
 function Release-Operation {
+    <#
+    .SYNOPSIS
+        Releases the global busy lock.
+    .DESCRIPTION
+        Clears the $script:isBusy flag, allowing new operations to start.
+        Must be called after every successful Guard-Operation call.
+    #>
     $script:isBusy = $false
 }
 
-# Applies a complete dark or light theme by setting 40+ DynamicResource brushes.
 function Set-Theme {
+    <#
+    .SYNOPSIS
+        Applies the dark or light theme to a WPF Window.
+    .DESCRIPTION
+        Replaces all DynamicResource brushes in the Window's Resources dictionary
+        with theme-specific color values. The dark theme uses Slate-based colors
+        (#1E293B surface, #60A5FA accent). The light theme uses neutral whites
+        and blues. All UI elements bound to DynamicResource update instantly.
+    .PARAMETER Window
+        The WPF Window to theme. Its Resources dictionary is modified in place.
+    .PARAMETER IsDark
+        If $true, applies the dark theme; otherwise the light theme.
+    .EXAMPLE
+        Set-Theme -Window $script:Window -IsDark $true
+    #>
     [CmdletBinding()]
     param(
         [Parameter(Mandatory)]$Window,
@@ -181,8 +226,21 @@ function Set-Theme {
     }
 }
 
-# Executes a scriptblock on the UI dispatcher thread with error handling.
 function Invoke-SafeUIAction {
+    <#
+    .SYNOPSIS
+        Executes a script block on the WPF Dispatcher thread.
+    .DESCRIPTION
+        Checks if the current thread has access to the WPF Dispatcher. If so,
+        executes directly. Otherwise, marshals the call to the UI thread via
+        Dispatcher.Invoke. Errors are caught and logged.
+    .PARAMETER Action
+        Script block to execute on the UI thread.
+    .PARAMETER ActionName
+        Human-readable name for error logging. Default: 'Unknown'.
+    .EXAMPLE
+        Invoke-SafeUIAction -Action { $script:ProgressBar.IsIndeterminate = $true } -ActionName 'Start Progress'
+    #>
     [CmdletBinding()]
     param(
         [Parameter(Mandatory)][scriptblock]$Action,
@@ -196,8 +254,17 @@ function Invoke-SafeUIAction {
     }
 }
 
-# Formats a byte count into a human-readable string (B, KB, or MB).
 function Format-FileSize {
+    <#
+    .SYNOPSIS
+        Converts a byte count to a human-readable file size string.
+    .PARAMETER Bytes
+        The number of bytes to format.
+    .OUTPUTS
+        String. Examples: '512 B', '15.43 KB', '2.10 MB'.
+    .EXAMPLE
+        Format-FileSize -Bytes 1048576  # returns '1.00 MB'
+    #>
     [CmdletBinding()]
     param([long]$Bytes)
     if ($Bytes -lt 1KB) { return '{0} B' -f $Bytes }
@@ -205,8 +272,20 @@ function Format-FileSize {
     return '{0:N2} MB' -f ($Bytes / 1MB)
 }
 
-# Toggles the progress bar and enables/disables action buttons during async operations.
 function Set-UIState {
+    <#
+    .SYNOPSIS
+        Toggles the UI between processing and idle states.
+    .DESCRIPTION
+        Enables or disables the progress bar (indeterminate mode), status label,
+        status dot color, and all action buttons based on the IsProcessing flag.
+    .PARAMETER IsProcessing
+        If $true, shows "Compiling..." status, orange dot, indeterminate
+        progress bar, and disables buttons. If $false, resets to idle.
+    .EXAMPLE
+        Set-UIState -IsProcessing $true   # Start processing
+        Set-UIState -IsProcessing $false  # End processing
+    #>
     [CmdletBinding()]
     param([bool]$IsProcessing)
     $script:isBusy = $IsProcessing
@@ -214,13 +293,37 @@ function Set-UIState {
         $script:ProgressBar.IsIndeterminate = $IsProcessing
         if (-not $IsProcessing) { $script:ProgressBar.Value = 0 }
     }
+    if ($script:StatusLabel) {
+        $script:StatusLabel.Text = if ($IsProcessing) { 'Compiling...' } else { 'Ready' }
+    }
+    if ($script:StatusDot) {
+        try { $script:StatusDot.Fill = if ($IsProcessing) { [System.Windows.Media.Brushes]::Orange } else { [System.Windows.Media.Brushes]::LimeGreen } } catch { }
+    }
     @($script:btnCompile, $script:btnSettings, $script:btnProjectFolder,
       $script:btnSrcScript, $script:btnOutPath, $script:btnIconPath,
       $script:btnClear) | ForEach-Object { if ($_) { $_.IsEnabled = -not $IsProcessing } }
 }
 
-# Displays a color-coded animated toast notification that auto-fades after 3 seconds.
 function Show-ToastMessage {
+    <#
+    .SYNOPSIS
+        Displays an animated toast notification in the bottom-right corner.
+    .DESCRIPTION
+        Creates a colored toast notification with an icon, fades it in over 200ms,
+        displays it for 3 seconds, then fades it out over 300ms and removes it
+        from the ToastContainer. Only works if $script:ToastContainer exists.
+    .PARAMETER Message
+        The notification text to display.
+    .PARAMETER Type
+        Toast type determining color and icon. Valid values:
+          Success (green checkmark)
+          Error   (red cross)
+          Warning (amber triangle)
+          Info    (blue circle-i, default)
+    .EXAMPLE
+        Show-ToastMessage -Message "Compilation complete!" -Type Success
+        Show-ToastMessage -Message "File not found" -Type Error
+    #>
     [CmdletBinding()]
     param(
         [Parameter(Mandatory)][string]$Message,

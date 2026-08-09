@@ -1,3 +1,56 @@
+<#
+.TITLE
+    PSWrap Event Handlers
+
+.SYNOPSIS
+    Wires all UI event handlers: button clicks, drag-drop, timers, window close.
+
+.DESCRIPTION
+    The central event-wiring module for the PSWrap GUI. Handles all user
+    interactions including:
+    - Theme toggle (dark/light mode)
+    - Help popup display
+    - Navigation between Script and CertSign pages
+    - File/folder browsing dialogs
+    - Drag-and-drop script loading
+    - Compilation trigger with full option gathering
+    - Async compilation polling and completion handling
+    - Window close with settings persistence and resource cleanup
+    - Help button wiring for advanced options
+    - Bundle file DataGrid selection
+
+.TAGS
+    Events,UI,WPF,Click,Timers,Close
+
+.MINROLE
+    Reader
+
+.PERMISSIONS
+    N/A — UI event handlers only
+
+.AUTHOR
+    m.abdelkader
+
+.VERSION
+    1.0.0
+
+.CHANGELOG
+    1.0.0 - Initial release
+
+.LASTUPDATE
+    2026-06-17
+
+.EXAMPLE
+    . .\src\EventHandlers.ps1
+    # All UI controls are now wired with event handlers.
+
+.NOTES
+    - All event handlers are wrapped in control-existence guards (e.g., if ($script:btnCompile))
+      because the controls may not exist if the XAML failed to load a specific version.
+    - The async compilation polling timer runs at 350ms intervals during compilation.
+    - Theme toggle uses $MoonIconData/$SunIconData SVG path data for the toggle icon.
+#>
+
 $script:IsDarkMode = $false
 
 if ($script:ThemeToggleBtn) {
@@ -20,8 +73,22 @@ if ($script:ThemeToggleBtn) {
     }) | Out-Null
 }
 
-# Displays a theme-aware floating popup window with formatted help text.
 function Show-HelpPopup {
+    <#
+    .SYNOPSIS
+        Displays a modal help popup dialog with formatted help text.
+    .DESCRIPTION
+        Dynamically builds a XAML popup window from inline markup, using
+        theme-appropriate colors. The help text is displayed in a scrollable
+        TextBlock. The dialog is modal (ShowDialog) relative to the main window.
+        Falls back to MessageBox on XAML parse failure.
+    .PARAMETER HelpText
+        The help content to display. Multi-line text is rendered with wrapping.
+    .PARAMETER Title
+        Optional dialog title. Displayed in the title bar and header.
+    .EXAMPLE
+        Show-HelpPopup -Title 'Version Info' -HelpText 'Enter the assembly version (e.g., 1.0.0.0).'
+    #>
     [CmdletBinding()]
     param(
         [Parameter(Mandatory)][string]$HelpText,
@@ -132,17 +199,7 @@ if ($script:btnSrcScript) {
         if ($dlg.ShowDialog() -eq 'OK') {
             $script:txtSrcScript.Text = $dlg.FileName
             Add-LogLine -Message "Source script: $($dlg.FileName)" -Level 'INFO'
-            $meta = Get-ScriptMetadata -FilePath $dlg.FileName
-            if ($meta.Title) {
-                if (-not $script:dlgState.Prod) { $script:dlgState.Prod = $meta.Title }
-                if (-not $script:dlgState.Desc) { $script:dlgState.Desc = $meta.Description }
-            }
-            if ($meta.Version) {
-                if ($script:dlgState.Ver -eq '1.0.0.0') { $script:dlgState.Ver = $meta.Version }
-            }
-            if ($meta.Author -and -not $script:dlgState.Comp) {
-                $script:dlgState.Comp = $meta.Author
-            }
+            Apply-ScriptMetadata -FilePath $dlg.FileName
             Update-UIState
         }
         Release-Operation
@@ -215,17 +272,7 @@ if ($script:btnProjectFolder) {
                 $script:txtSrcScript.Text = $ps1f.FullName
                 $script:txtOutPath.Text = Join-Path $pdir ([System.IO.Path]::GetFileNameWithoutExtension($ps1f.Name) + '.exe')
                 Add-LogLine -Message "Auto-detected script: $($ps1f.Name)" -Level 'INFO'
-                $meta = Get-ScriptMetadata -FilePath $ps1f.FullName
-                if ($meta.Title) {
-                    if (-not $script:dlgState.Prod) { $script:dlgState.Prod = $meta.Title }
-                    if (-not $script:dlgState.Desc) { $script:dlgState.Desc = $meta.Description }
-                }
-                if ($meta.Version) {
-                    if ($script:dlgState.Ver -eq '1.0.0.0') { $script:dlgState.Ver = $meta.Version }
-                }
-                if ($meta.Author -and -not $script:dlgState.Comp) {
-                    $script:dlgState.Comp = $meta.Author
-                }
+                Apply-ScriptMetadata -FilePath $ps1f.FullName
                 Update-UIState
             }
             $icof = Get-ChildItem -LiteralPath $pdir -Filter '*.ico' -File -ErrorAction SilentlyContinue | Select-Object -First 1
@@ -237,8 +284,20 @@ if ($script:btnProjectFolder) {
         Release-Operation
     }) | Out-Null
 }
-# Highlights the selected navigation tab and shows/hides the corresponding page panel.
 function Set-ActiveNavTab {
+    <#
+    .SYNOPSIS
+        Activates a navigation tab and updates visibility of page panels.
+    .DESCRIPTION
+        Highlights the selected navigation button with accent colors and shows
+        the corresponding page. Handles both 'Script' (Dashboard) and 'CertSign'
+        pages. Uses DynamicResource brushes for theme-aware styling.
+    .PARAMETER TabName
+        Tab identifier. 'Script' or 'CertSign' — toggles PageDashboard and
+        PageCertSign visibility.
+    .EXAMPLE
+        Set-ActiveNavTab -TabName 'Script'
+    #>
     [CmdletBinding()]
     param([string]$TabName)
     $activeBg = $script:Window.TryFindResource('AccentTintBrush')
@@ -310,13 +369,17 @@ if ($script:btnCompile) {
             Show-ToastMessage -Message 'Specify the output EXE file path' -Type Error
             return
         }
+
+        # Ensure output path has .exe extension (case-insensitive check)
         if ($outputPath -notlike '*.exe') { $outputPath += '.exe'; $script:txtOutPath.Text = $outputPath }
 
+        # Create output directory if it doesn't exist
         $outputDir = Split-Path $outputPath -Parent
         if ($outputDir -and -not (Test-Path $outputDir)) {
             $null = New-Item -ItemType Directory -Path $outputDir -Force
         }
 
+        # Check if existing output file is locked (in use by another process)
         if (Test-Path $outputPath) {
             try {
                 $fs = [System.IO.File]::Open($outputPath, 'Open', 'Read', 'None')
@@ -346,19 +409,19 @@ if ($script:btnCompile) {
         if ($bundlePath) { Add-LogLine -Message "Bundle: $bundlePath" -Level 'INFO' }
 
         $selectedFiles = @($script:bundleFiles | Where-Object { $_.IsSelected } | ForEach-Object { $_.FullPath })
-        $optVersion = if ($script:txtOptVersion) { $script:txtOptVersion.Text.Trim() } else { '1.0.0.0' }
-        $optProduct = if ($script:txtOptProduct) { $script:txtOptProduct.Text.Trim() } else { '' }
-        $optDesc = if ($script:txtOptDesc) { $script:txtOptDesc.Text.Trim() } else { '' }
-        $optCopyright = if ($script:txtOptCopyright) { $script:txtOptCopyright.Text.Trim() } else { '' }
-        $optCompany = if ($script:txtOptCompany) { $script:txtOptCompany.Text.Trim() } else { '' }
-        $optTrademark = if ($script:txtOptTrademark) { $script:txtOptTrademark.Text.Trim() } else { '' }
+        $optVersion = $script:dlgState.Ver
+        $optProduct = $script:dlgState.Prod
+        $optDesc = $script:dlgState.Desc
+        $optCopyright = $script:dlgState.Copy
+        $optCompany = $script:dlgState.Comp
+        $optTrademark = $script:dlgState.Trade
         $optNoConsole = if ($script:chkOptNoConsole) { [bool]$script:chkOptNoConsole.IsChecked } else { $true }
         $optConHost = if ($script:chkOptConHost) { [bool]$script:chkOptConHost.IsChecked } else { $false }
         $optUnicodeEncoding = if ($script:chkOptUnicodeEncoding) { [bool]$script:chkOptUnicodeEncoding.IsChecked } else { $false }
         $optCredentialGUI = if ($script:chkOptCredentialGUI) { [bool]$script:chkOptCredentialGUI.IsChecked } else { $false }
         $optNoOutput = if ($script:chkOptNoOutput) { [bool]$script:chkOptNoOutput.IsChecked } else { $false }
         $optNoError = if ($script:chkOptNoError) { [bool]$script:chkOptNoError.IsChecked } else { $false }
-        $optRequireAdmin = if ($script:chkOptRequireAdmin) { [bool]$script:chkOptRequireAdmin.IsChecked } else { $false }
+        $optRequireAdmin = [bool]$script:dlgState.Adm
         $optConfigFile = if ($script:chkOptConfigFile) { [bool]$script:chkOptConfigFile.IsChecked } else { $false }
         $optNoVisualStyles = if ($script:chkOptNoVisualStyles) { [bool]$script:chkOptNoVisualStyles.IsChecked } else { $false }
         $optExitOnCancel = if ($script:chkOptExitOnCancel) { [bool]$script:chkOptExitOnCancel.IsChecked } else { $false }
@@ -375,9 +438,14 @@ if ($script:btnCompile) {
         Add-LogLine -Message 'Using PS2EXE Advanced Engine (full PowerShell host)' -Level 'INFO'
         Invoke-CompileExePS2EXE -SourcePath $sourcePath -OutputPath $outputPath -IconPath $iconPath -BundleFolder $bundlePath `
             -Version $optVersion -ProductName $optProduct -FileDescription $optDesc -Copyright $optCopyright -Company $optCompany `
-            -NoConsole $optNoConsole -SuppressOutput $optNoOutput -SuppressError $optNoError -RequireAdmin $optRequireAdmin `
-            -GenerateConfig $optConfigFile -ApartmentState $(if ($optSTA) { 'STA' } else { 'MTA' }) `
-            -Platform $optPlatform -SelectedFiles $selectedFiles
+            -Trademark $optTrademark -NoConsole $optNoConsole -ConHost $optConHost `
+            -UnicodeEncoding $optUnicodeEncoding -CredentialGUI $optCredentialGUI `
+            -SuppressOutput $optNoOutput -SuppressError $optNoError -RequireAdmin $optRequireAdmin `
+            -GenerateConfig $optConfigFile -NoVisualStyles $optNoVisualStyles -ExitOnCancel $optExitOnCancel `
+            -DPIAware $optDPIAware -PrepareDebug $optPrepareDebug -SupportOS $optSupportOS `
+            -Virtualize $optVirtualize -LongPaths $optLongPaths -SaveIcon $optSaveIcon `
+            -ApartmentState $(if ($optSTA) { 'STA' } else { 'MTA' }) `
+            -Platform $optPlatform -LCID $optLCID -SelectedFiles $selectedFiles
     }) | Out-Null
 }
 if ($script:btnOpenOut) {
@@ -555,17 +623,7 @@ $script:Window.Add_Drop({
             if (-not $script:txtOutPath.Text) {
                 $script:txtOutPath.Text = [System.IO.Path]::ChangeExtension($ps1, '.exe')
             }
-            $meta = Get-ScriptMetadata -FilePath $ps1
-            if ($meta.Title) {
-                if (-not $script:dlgState.Prod) { $script:dlgState.Prod = $meta.Title }
-                if (-not $script:dlgState.Desc) { $script:dlgState.Desc = $meta.Description }
-            }
-            if ($meta.Version) {
-                if ($script:dlgState.Ver -eq '1.0.0.0') { $script:dlgState.Ver = $meta.Version }
-            }
-            if ($meta.Author -and -not $script:dlgState.Comp) {
-                $script:dlgState.Comp = $meta.Author
-            }
+            Apply-ScriptMetadata -FilePath $ps1
             Add-LogLine -Message "File dropped: $ps1" -Level 'INFO'
             Update-UIState
         }
@@ -610,9 +668,6 @@ $script:pollTimer.Add_Tick({
             Add-LogLine -Message "Compilation result error: $($_.Exception.Message)" -Level 'ERROR'
         } finally {
             Stop-AsyncOperation
-            [System.GC]::Collect()
-            [System.GC]::WaitForPendingFinalizers()
-            [System.GC]::Collect()
             Set-UIState -IsProcessing $false
             Update-UIState
         }
@@ -620,15 +675,11 @@ $script:pollTimer.Add_Tick({
 }) | Out-Null
 $script:pollTimer.Start()
 $script:Window.Add_Closing({
+    try { $script:clockTimer.Stop() } catch { }
+    try { $script:pollTimer.Stop() } catch { }
     Invoke-SafeUIAction -Action {
         Add-LogLine -Message "Application closing. Releasing resources..." -Level 'INFO'
         try {
-            if ($script:txtOptVersion) { $script:dlgState.Ver = $script:txtOptVersion.Text.Trim() }
-            if ($script:txtOptProduct) { $script:dlgState.Prod = $script:txtOptProduct.Text.Trim() }
-            if ($script:txtOptDesc) { $script:dlgState.Desc = $script:txtOptDesc.Text.Trim() }
-            if ($script:txtOptCopyright) { $script:dlgState.Copy = $script:txtOptCopyright.Text.Trim() }
-            if ($script:txtOptCompany) { $script:dlgState.Comp = $script:txtOptCompany.Text.Trim() }
-            if ($script:txtOptTrademark) { $script:dlgState.Trade = $script:txtOptTrademark.Text.Trim() }
             if ($script:chkOptNoConsole) { $script:dlgState.NoCon = [bool]$script:chkOptNoConsole.IsChecked }
             if ($script:chkOptNoOutput) { $script:dlgState.SOut = [bool]$script:chkOptNoOutput.IsChecked }
             if ($script:chkOptNoError) { $script:dlgState.SErr = [bool]$script:chkOptNoError.IsChecked }
@@ -638,22 +689,23 @@ $script:Window.Add_Closing({
             if ($script:radOptSTA) { $script:dlgState.STA = [bool]$script:radOptSTA.IsChecked }
             if ($script:cboOptPlatform) { $script:dlgState.Plat = $script:cboOptPlatform.SelectedIndex }
             $script:dlgState.UsePS2EXE = $true
+            $buildSettings = @{}
+            $metaKeys = @('Ver', 'Prod', 'Desc', 'Copy', 'Comp', 'Trade')
+            foreach ($key in $script:dlgState.Keys) {
+                if ($key -notin $metaKeys) { $buildSettings.$key = $script:dlgState.$key }
+            }
             $save = @{
                 Theme = if ($script:IsDarkMode) { 'Dark' } else { 'Light' }
-                LastProjectFolder = $script:txtProjectFolder.Text
-                LastSourceScript = $script:txtSrcScript.Text
-                LastOutputPath = $script:txtOutPath.Text
-                LastIconPath = $script:txtIconPath.Text
-                BuildSettings = $script:dlgState
+                BuildSettings = $buildSettings
                 ToastEnabled = if ($script:AppSettings -and $null -ne $script:AppSettings.ToastEnabled) { $script:AppSettings.ToastEnabled } else { $true }
             }
             Save-UserSettings -Settings $save
-        } catch { }
+        } catch { Add-LogLine -Message "Failed to save settings on exit: $_" -Level 'WARNING' }
         try {
             Stop-AsyncOperation
             Cleanup-TempFiles
             Close-LogFile
-        } catch { }
+        } catch { Add-LogLine -Message "Cleanup error on exit: $_" -Level 'WARNING' }
     } -ActionName 'Window Closing'
 }) | Out-Null
 

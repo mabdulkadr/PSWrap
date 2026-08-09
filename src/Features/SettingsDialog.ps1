@@ -42,8 +42,24 @@
     - Changes are only committed on OK; Cancel discards all edits
 #>
 
-# Parses a .ps1 file's comment-based header to extract Title, Version, Description, and Author.
 function Get-ScriptMetadata {
+<#
+.SYNOPSIS
+    Extracts script metadata from a PowerShell file's comment-based help block.
+
+.DESCRIPTION
+    Parses a PowerShell script for .TITLE, .VERSION, .DESCRIPTION, and .AUTHOR
+    keywords within the file's comment-based help. Falls back to .SYNOPSIS for
+    title, #requires -Version for version, and the filename stem if no title
+    is found.
+
+.PARAMETER FilePath
+    Path to the PowerShell script file to scan for metadata.
+
+.OUTPUTS
+    Hashtable. Returns a hashtable with keys Title, Version, Description, and
+    Author containing the extracted metadata strings.
+#>
     [CmdletBinding()]
     param([Parameter(Mandatory)][string]$FilePath)
     $result = @{ Title = ''; Version = ''; Description = ''; Author = '' }
@@ -51,29 +67,93 @@ function Get-ScriptMetadata {
         if (-not (Test-Path -LiteralPath $FilePath -PathType Leaf)) { return $result }
         $content = Get-Content -LiteralPath $FilePath -Raw -Encoding UTF8 -ErrorAction SilentlyContinue
         if (-not $content) { return $result }
-        if ($content -match '(?s)<#\s*\.TITLE\s*\r?\n\s+(.+?)(?:\r?\n\s*\.)') {
+
+        # Title: .TITLE -> .SYNOPSIS -> filename (supports same-line and next-line)
+        if ($content -match '(?im)^\s*\.TITLE\s*\r?\n?\s*(.+?)\s*$') {
             $result.Title = $matches[1].Trim()
         }
-        elseif ($content -match '(?s)<#\s*\r?\n\.TITLE\s*\r?\n\s+(.+?)(?:\r?\n\s*\.)') {
+        elseif ($content -match '(?im)^\s*\.SYNOPSIS\s*\r?\n?\s*(.+?)\s*$') {
             $result.Title = $matches[1].Trim()
         }
-        if ($content -match '(?m)^\s*\.VERSION\s*\r?\n\s+(\S+)') {
+        if (-not $result.Title) {
+            $result.Title = [System.IO.Path]::GetFileNameWithoutExtension($FilePath)
+        }
+
+        # Version: .VERSION or #requires -Version (supports same-line and next-line)
+        if ($content -match '(?im)^\s*\.VERSION\s*\r?\n?\s*([\d.]+)') {
             $result.Version = $matches[1].Trim()
         }
-        if ($content -match '(?s)\.DESCRIPTION\s*\r?\n\s+(.+?)(?:\r?\n\s*\.)') {
+        if (-not $result.Version -and $content -match '(?im)#requires\s+-Version\s+([\d.]+)') {
+            $result.Version = $matches[1].Trim()
+        }
+
+        # Description: .DESCRIPTION (multiline, up to next .keyword or end of help block)
+        if ($content -match '(?is)\.DESCRIPTION\s*\r?\n\s*(.+?)(?:\r?\n\s*\.\w+|\r?\n\s*#+>|$)') {
             $desc = $matches[1].Trim() -replace '\r?\n\s+', ' '
             if ($desc.Length -gt 200) { $desc = $desc.Substring(0, 200) }
             $result.Description = $desc
         }
-        if ($content -match '(?m)^\s*\.AUTHOR\s*\r?\n\s+(\S.+)') {
+
+        # Author: .AUTHOR (supports same-line and next-line)
+        if ($content -match '(?im)^\s*\.AUTHOR\s*\r?\n?\s*(.+?)\s*$') {
             $result.Author = $matches[1].Trim()
         }
     } catch { }
     return $result
 }
 
-# Opens a theme-aware modal WPF dialog for editing advanced build settings.
+function Apply-ScriptMetadata {
+<#
+.SYNOPSIS
+    Merges extracted script metadata into the global dialog state.
+
+.DESCRIPTION
+    Calls Get-ScriptMetadata on the given file and populates $script:dlgState
+    with the extracted title, description, version, and company values.
+
+.PARAMETER FilePath
+    Path to the PowerShell script file whose metadata will be extracted and
+    applied to the dialog state.
+
+.NOTES
+    Performs a non-destructive merge into $script:dlgState — existing dlgState
+    values are only overwritten if they are empty or at their default values
+     (e.g. Ver defaults to '1.1.0.0'). This preserves user-defined values while
+    filling in gaps from script metadata.
+#>
+    [CmdletBinding()]
+    param([Parameter(Mandatory)][string]$FilePath)
+    $meta = Get-ScriptMetadata -FilePath $FilePath
+    if ($meta.Title) {
+        $script:dlgState.Prod = $meta.Title
+        $script:dlgState.Desc = $meta.Description
+    }
+    if ($meta.Version) {
+        $script:dlgState.Ver = $meta.Version
+    }
+    if ($meta.Author) {
+        $script:dlgState.Comp = $meta.Author
+    }
+}
+
 function Show-SettingsDialog {
+<#
+.SYNOPSIS
+    Opens the Advanced Build Settings dialog window.
+
+.DESCRIPTION
+    Renders a modal, theme-aware WPF dialog for configuring assembly metadata,
+    compilation behavior, threading model, and platform target. Changes are
+    committed to $script:dlgState on Save and persisted to JSON on app close.
+
+.NOTES
+    The XAML layout is constructed as a string with interpolated theme color
+    variables derived from the current dark/light mode ($script:IsDarkMode).
+    Color values are resolved inline via PowerShell string expansion before
+    the XAML is parsed with XmlNodeReader and loaded through XamlReader.
+    Controls bind directly to $script:dlgState for live reflection of saved
+    preferences.
+#>
     try {
         $isDark = $script:IsDarkMode
         $bgColor       = if ($isDark) { '#1E293B' } else { '#F4F7FB' }
@@ -247,19 +327,19 @@ function Show-SettingsDialog {
                                     FontSize="12" Foreground="$textBody" Content="Save Icon"/>
                             </StackPanel>
                             <StackPanel Grid.Column="1">
-                                <CheckBox x:Name="chkDlgNoVisual" IsChecked="False" Margin="0,0,0,8"
+                                <CheckBox x:Name="chkDlgNoVisual" IsChecked="$($s.NoVisual)" Margin="0,0,0,8"
                                     FontSize="12" Foreground="$textBody" Content="No Visual Styles"/>
-                                <CheckBox x:Name="chkDlgExitCancel" IsChecked="False" Margin="0,0,0,8"
+                                <CheckBox x:Name="chkDlgExitCancel" IsChecked="$($s.ExitCancel)" Margin="0,0,0,8"
                                     FontSize="12" Foreground="$textBody" Content="Exit On Cancel"/>
-                                <CheckBox x:Name="chkDlgDPI" IsChecked="False" Margin="0,0,0,8"
+                                <CheckBox x:Name="chkDlgDPI" IsChecked="$($s.DPI)" Margin="0,0,0,8"
                                     FontSize="12" Foreground="$textBody" Content="DPI Aware"/>
-                                <CheckBox x:Name="chkDlgDebug" IsChecked="False" Margin="0,0,0,8"
+                                <CheckBox x:Name="chkDlgDebug" IsChecked="$($s.Debug)" Margin="0,0,0,8"
                                     FontSize="12" Foreground="$textBody" Content="Prepare Debug"/>
-                                <CheckBox x:Name="chkDlgSupportOS" IsChecked="False" Margin="0,0,0,8"
+                                <CheckBox x:Name="chkDlgSupportOS" IsChecked="$($s.SupportOS)" Margin="0,0,0,8"
                                     FontSize="12" Foreground="$textBody" Content="Support OS"/>
-                                <CheckBox x:Name="chkDlgVirtual" IsChecked="False" Margin="0,0,0,8"
+                                <CheckBox x:Name="chkDlgVirtual" IsChecked="$($s.Virtual)" Margin="0,0,0,8"
                                     FontSize="12" Foreground="$textBody" Content="Virtualize"/>
-                                <CheckBox x:Name="chkDlgLongPaths" IsChecked="False"
+                                <CheckBox x:Name="chkDlgLongPaths" IsChecked="$($s.LongPaths)" Margin="0,0,0,8"
                                     FontSize="12" Foreground="$textBody" Content="Long Paths"/>
                             </StackPanel>
                         </Grid>
@@ -310,7 +390,7 @@ function Show-SettingsDialog {
                             <TextBox x:Name="txtDlgLCID" Grid.Row="4" Grid.Column="1"
                                 Background="$inputBg" Foreground="$textPrimary" BorderBrush="$borderColor"
                                 BorderThickness="1" Height="30" Padding="8,0" FontSize="12"
-                                VerticalContentAlignment="Center" Text="" Width="120"
+                                VerticalContentAlignment="Center" Text="$($s.LCID)" Width="120"
                                 HorizontalAlignment="Left"/>
                         </Grid>
                     </Border>
@@ -321,7 +401,7 @@ function Show-SettingsDialog {
                     <Border Background="$surfaceColor" BorderBrush="$borderColor" BorderThickness="1"
                         CornerRadius="8" Padding="14" Margin="0,0,0,4">
                         <StackPanel Orientation="Horizontal">
-                            <CheckBox x:Name="chkDlgToast" IsChecked="True"
+                            <CheckBox x:Name="chkDlgToast" IsChecked="$($script:AppSettings.ToastEnabled)"
                                 FontSize="12" Foreground="$textBody"
                                 Content="Enable toast notifications" VerticalAlignment="Center"/>
                         </StackPanel>
@@ -407,8 +487,16 @@ function Show-SettingsDialog {
                 $script:dlgState.Adm       = [bool]$dlg.FindName('chkDlgAdm').IsChecked
                 $script:dlgState.Cfg       = [bool]$dlg.FindName('chkDlgCfg').IsChecked
                 $script:dlgState.CopyIcon  = [bool]$dlg.FindName('chkDlgCopyIcon').IsChecked
+                $script:dlgState.NoVisual  = [bool]$dlg.FindName('chkDlgNoVisual').IsChecked
+                $script:dlgState.ExitCancel = [bool]$dlg.FindName('chkDlgExitCancel').IsChecked
+                $script:dlgState.DPI       = [bool]$dlg.FindName('chkDlgDPI').IsChecked
+                $script:dlgState.Debug     = [bool]$dlg.FindName('chkDlgDebug').IsChecked
+                $script:dlgState.SupportOS = [bool]$dlg.FindName('chkDlgSupportOS').IsChecked
+                $script:dlgState.Virtual   = [bool]$dlg.FindName('chkDlgVirtual').IsChecked
+                $script:dlgState.LongPaths = [bool]$dlg.FindName('chkDlgLongPaths').IsChecked
                 $script:dlgState.STA       = [bool]$dlg.FindName('radDlgSTA').IsChecked
                 $script:dlgState.Plat      = $dlg.FindName('cboDlgPlatform').SelectedIndex
+                $script:dlgState.LCID      = $dlg.FindName('txtDlgLCID').Text.Trim()
                 $script:dlgState.UsePS2EXE = $true
                 if ($script:chkToastEnabled) {
                     $script:AppSettings.ToastEnabled = [bool]$dlg.FindName('chkDlgToast').IsChecked

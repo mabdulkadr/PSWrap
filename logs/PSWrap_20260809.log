@@ -1,0 +1,593 @@
+﻿09:21:08 [INFO   ] === PSWrap v1.0.0 Started ===
+09:23:46 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\PSWrap - Copy
+09:23:46 [INFO   ] Auto-detected script: PSWrap.ps1
+09:24:03 [INFO   ] Compilation process initiated...
+09:24:03 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1
+09:24:03 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+09:24:03 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\PSWrap - Copy
+09:24:03 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+09:24:03 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+09:24:03 [INFO   ] [~] PS2EXE bundling 43 file(s)...
+09:24:03 [INFO   ] [+] Bundle created: 43 file(s), total 1422948 bytes
+09:24:03 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+09:24:03 [INFO   ] [+] PS2EXE C# wrapper generated (21732 chars)
+09:24:03 [SUCCESS] Image converted to ICO: app-icon.png -> tmpai10ib.ico
+09:24:06 [INFO   ] ============================================
+09:25:36 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+09:25:36 [INFO   ] ============================================
+09:25:36 [INFO   ] [~] Reading source script...
+09:25:36 [INFO   ] [+] Source: PSWrap.ps1 (2445 bytes)
+09:25:36 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+09:25:36 [INFO   ] [~] Resolved 5 reference assemblies
+09:25:36 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmpai10ib.ico
+09:25:36 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpai10ib.ico"
+09:25:36 [INFO   ] [~] Embedded bundle: tmp2bu0i1.bundle (1899120 bytes)
+09:25:36 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+09:25:36 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+09:25:36 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+09:25:36 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpai10ib.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpuobpu5.cs" /resource:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmp2bu0i1.bundle","tmp2bu0i1.bundle"
+09:25:36 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+09:25:36 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+09:25:36 [INFO   ] Size: 1.97 MB
+09:25:36 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+09:26:03 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+09:26:05 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe ===
+09:26:05 [INFO   ] Loading certificate...
+09:26:06 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+09:26:06 [INFO   ] Importing CA to Intermediate store...
+09:26:06 [INFO   ] Waiting for file to be available...
+09:26:06 [INFO   ] Signing...
+09:26:08 [SUCCESS] Signing completed.
+09:26:08 [INFO   ] Signature status: Valid
+09:26:08 [SUCCESS] CA trusted.
+09:26:08 [INFO   ] Signature status after trust: Valid
+09:26:08 [SUCCESS] === Signing Complete ===
+09:26:25 [INFO   ] Application closing. Releasing resources...
+09:26:25 [INFO   ] === PSWrap closing ===
+10:24:46 [INFO   ] === PSWrap v1.0.0 Started ===
+10:24:54 [INFO   ] Application closing. Releasing resources...
+10:24:54 [INFO   ] === PSWrap closing ===
+10:25:10 [INFO   ] === PSWrap v1.0.0 Started ===
+10:25:46 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\PSWrap - Copy
+10:25:46 [INFO   ] Auto-detected script: PSWrap.ps1
+10:27:33 [INFO   ] Compilation process initiated...
+10:27:33 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1
+10:27:33 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:27:33 [INFO   ] Icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient.ico
+10:27:33 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\PSWrap - Copy
+10:27:33 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+10:27:33 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+10:27:33 [INFO   ] [~] PS2EXE bundling 44 file(s)...
+10:27:34 [INFO   ] [+] Bundle created: 44 file(s), total 3501196 bytes
+10:27:34 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+10:27:34 [INFO   ] [+] PS2EXE C# wrapper generated (21732 chars)
+10:27:34 [SUCCESS] Image converted to ICO: app-icon.png -> tmplex0fm.ico
+10:27:36 [INFO   ] ============================================
+10:27:36 [INFO   ] PSWrap v - PS2EXE Engine (Full PSHost)
+10:27:36 [INFO   ] ============================================
+10:27:36 [INFO   ] [~] Reading source script...
+10:27:36 [INFO   ] [+] Source: PSWrap.ps1 (2445 bytes)
+10:27:36 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:27:36 [INFO   ] [~] Resolved 5 reference assemblies
+10:27:36 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient.ico
+10:27:36 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient.ico"
+10:27:36 [INFO   ] [~] Embedded bundle: tmpunywwf.bundle (4670132 bytes)
+10:27:36 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:27:36 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:27:36 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:27:36 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpa0uxou.cs" /resource:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpunywwf.bundle","tmpunywwf.bundle"
+10:27:36 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:27:36 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:27:36 [INFO   ] Size: 4.49 MB
+10:27:36 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:27:47 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:27:51 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe ===
+10:27:51 [INFO   ] Loading certificate...
+10:27:51 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+10:27:51 [INFO   ] Importing CA to Intermediate store...
+10:27:51 [INFO   ] Waiting for file to be available...
+10:27:51 [INFO   ] Signing...
+10:27:54 [SUCCESS] Signing completed.
+10:27:54 [INFO   ] Signature status: Valid
+10:27:54 [SUCCESS] CA trusted.
+10:27:54 [INFO   ] Signature status after trust: Valid
+10:27:54 [SUCCESS] === Signing Complete ===
+10:32:14 [INFO   ] Application closing. Releasing resources...
+10:32:14 [INFO   ] === PSWrap closing ===
+10:33:00 [INFO   ] === PSWrap v1.0.0 Started ===
+10:33:13 [INFO   ] Application closing. Releasing resources...
+10:33:13 [INFO   ] === PSWrap closing ===
+10:35:20 [INFO   ] === PSWrap v1.0.0 Started ===
+10:35:27 [INFO   ] Application closing. Releasing resources...
+10:35:27 [INFO   ] === PSWrap closing ===
+10:41:14 [INFO   ] === PSWrap v1.0.0 Started ===
+10:41:25 [INFO   ] All input fields have been reset
+10:41:29 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\PSWrap - Copy
+10:41:29 [INFO   ] Auto-detected script: PSWrap.ps1
+10:41:38 [INFO   ] Build settings updated
+10:41:49 [INFO   ] Compilation process initiated...
+10:41:49 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1
+10:41:49 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:41:49 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\PSWrap - Copy
+10:41:49 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+10:41:49 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+10:41:49 [INFO   ] [~] PS2EXE bundling 44 file(s)...
+10:41:49 [INFO   ] [+] Bundle created: 44 file(s), total 6138508 bytes
+10:41:49 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+10:41:49 [INFO   ] [+] PS2EXE C# wrapper generated (21732 chars)
+10:41:49 [SUCCESS] Image converted to ICO: app-icon.png -> tmpj0prud.ico
+10:41:51 [INFO   ] ============================================
+10:41:51 [INFO   ] PSWrap v - PS2EXE Engine (Full PSHost)
+10:41:51 [INFO   ] ============================================
+10:41:51 [INFO   ] [~] Reading source script...
+10:41:51 [INFO   ] [+] Source: PSWrap.ps1 (2445 bytes)
+10:41:51 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:41:51 [INFO   ] [~] Resolved 5 reference assemblies
+10:41:51 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmpj0prud.ico
+10:41:51 [INFO   ] [~] Embedding admin rights manifest
+10:41:51 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpj0prud.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe.win32manifest"
+10:41:51 [INFO   ] [~] Embedded bundle: tmpyyb3je.bundle (8186548 bytes)
+10:41:51 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:41:51 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:41:51 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:41:51 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpj0prud.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe.win32manifest" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmps2ungp.cs" /resource:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpyyb3je.bundle","tmpyyb3je.bundle"
+10:41:51 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:41:51 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:41:51 [INFO   ] Size: 7.97 MB
+10:41:51 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:41:58 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:41:59 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe ===
+10:41:59 [INFO   ] Loading certificate...
+10:41:59 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+10:41:59 [INFO   ] Importing CA to Intermediate store...
+10:42:00 [INFO   ] Waiting for file to be available...
+10:42:00 [INFO   ] Signing...
+10:42:02 [SUCCESS] Signing completed.
+10:42:02 [INFO   ] Signature status: Valid
+10:42:02 [SUCCESS] CA trusted.
+10:42:03 [INFO   ] Signature status after trust: Valid
+10:42:03 [SUCCESS] === Signing Complete ===
+10:42:11 [INFO   ] Log entries copied to clipboard.
+10:42:28 [INFO   ] Application closing. Releasing resources...
+10:42:28 [INFO   ] === PSWrap closing ===
+10:44:50 [INFO   ] === PSWrap v1.0.0 Started ===
+10:44:57 [INFO   ] Build settings updated
+10:45:00 [INFO   ] Compilation process initiated...
+10:45:00 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1
+10:45:00 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:45:00 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\PSWrap - Copy
+10:45:00 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+10:45:00 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+10:45:00 [INFO   ] [~] PS2EXE bundling 43 file(s)...
+10:45:00 [INFO   ] [+] Bundle created: 43 file(s), total 1422948 bytes
+10:45:00 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+10:45:00 [INFO   ] [+] PS2EXE C# wrapper generated (21732 chars)
+10:45:00 [SUCCESS] Image converted to ICO: app-icon.png -> tmpabdnxh.ico
+10:45:02 [INFO   ] ============================================
+10:45:02 [INFO   ] PSWrap v1.0.0 - PS2EXE Engine (Full PSHost)
+10:45:02 [INFO   ] ============================================
+10:45:02 [INFO   ] [~] Reading source script...
+10:45:02 [INFO   ] [+] Source: PSWrap.ps1 (2445 bytes)
+10:45:02 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:45:02 [INFO   ] [~] Resolved 5 reference assemblies
+10:45:02 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmpabdnxh.ico
+10:45:02 [INFO   ] [~] Embedding admin rights manifest
+10:45:02 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpabdnxh.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe.win32manifest"
+10:45:02 [INFO   ] [~] Embedded bundle: tmp2hinfu.bundle (1899120 bytes)
+10:45:02 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:45:02 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:45:02 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:45:02 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpabdnxh.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe.win32manifest" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpvmepz3.cs" /resource:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmp2hinfu.bundle","tmp2hinfu.bundle"
+10:45:02 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:45:02 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:45:02 [INFO   ] Size: 1.97 MB
+10:45:02 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:45:10 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:45:12 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe ===
+10:45:12 [INFO   ] Loading certificate...
+10:45:12 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+10:45:12 [INFO   ] Importing CA to Intermediate store...
+10:45:12 [INFO   ] Waiting for file to be available...
+10:45:13 [INFO   ] Signing...
+10:45:15 [SUCCESS] Signing completed.
+10:45:15 [INFO   ] Signature status: Valid
+10:45:15 [SUCCESS] CA trusted.
+10:45:15 [INFO   ] Signature status after trust: Valid
+10:45:15 [SUCCESS] === Signing Complete ===
+10:46:34 [INFO   ] Application closing. Releasing resources...
+10:46:34 [INFO   ] === PSWrap closing ===
+10:47:24 [INFO   ] === PSWrap v1.0.0 Started ===
+10:47:35 [INFO   ] Build settings updated
+10:47:56 [INFO   ] Compilation process initiated...
+10:47:56 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1
+10:47:56 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:47:56 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\PSWrap - Copy
+10:47:56 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+10:47:56 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+10:47:56 [INFO   ] [~] PS2EXE bundling 44 file(s)...
+10:47:56 [INFO   ] [+] Bundle created: 44 file(s), total 1545044 bytes
+10:47:56 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+10:47:56 [INFO   ] [+] PS2EXE C# wrapper generated (21732 chars)
+10:47:56 [SUCCESS] Image converted to ICO: app-icon.png -> tmpuublzc.ico
+10:47:57 [INFO   ] ============================================
+10:47:57 [INFO   ] PSWrap v1.0.0 - PS2EXE Engine (Full PSHost)
+10:47:57 [INFO   ] ============================================
+10:47:57 [INFO   ] [~] Reading source script...
+10:47:57 [INFO   ] [+] Source: PSWrap.ps1 (2881 bytes)
+10:47:57 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:47:57 [INFO   ] [~] Resolved 5 reference assemblies
+10:47:57 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmpuublzc.ico
+10:47:57 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpuublzc.ico"
+10:47:57 [INFO   ] [~] Embedded bundle: tmp0ebieg.bundle (2061943 bytes)
+10:47:57 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:47:57 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:47:57 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:47:57 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpuublzc.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpsf30kt.cs" /resource:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmp0ebieg.bundle","tmp0ebieg.bundle"
+10:47:57 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:47:57 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:47:57 [INFO   ] Size: 2.13 MB
+10:47:57 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:48:03 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+10:48:04 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe ===
+10:48:04 [INFO   ] Loading certificate...
+10:48:05 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+10:48:05 [INFO   ] Importing CA to Intermediate store...
+10:48:05 [INFO   ] Waiting for file to be available...
+10:48:05 [INFO   ] Signing...
+10:48:07 [SUCCESS] Signing completed.
+10:48:07 [INFO   ] Signature status: HashMismatch
+10:48:07 [SUCCESS] CA trusted.
+10:48:07 [INFO   ] Signature status after trust: HashMismatch
+10:48:07 [SUCCESS] === Signing Complete ===
+10:48:16 [INFO   ] Application closing. Releasing resources...
+10:48:16 [INFO   ] === PSWrap closing ===
+14:03:05 [INFO   ] === PSWrap v1.1.0 Started ===
+14:03:17 [INFO   ] Application closing. Releasing resources...
+14:03:17 [INFO   ] === PSWrap closing ===
+14:03:46 [INFO   ] === PSWrap v1.1.0 Started ===
+14:03:55 [INFO   ] All input fields have been reset
+14:04:12 [INFO   ] Build settings updated
+14:04:21 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3
+14:04:21 [INFO   ] Auto-detected script: Computer Domain Assistant v3.4.ps1
+14:04:21 [INFO   ] Auto-detected icon: 4854186.ico
+14:04:26 [INFO   ] Build settings updated
+14:04:27 [INFO   ] Compilation process initiated...
+14:04:27 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.ps1
+14:04:27 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:04:27 [INFO   ] Icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico
+14:04:27 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3
+14:04:27 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+14:04:27 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+14:04:27 [INFO   ] [~] PS2EXE bundling 15 file(s)...
+14:04:27 [INFO   ] [+] Bundle created: 15 file(s), total 802183 bytes
+14:04:27 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+14:04:27 [INFO   ] [+] PS2EXE C# wrapper generated (21828 chars)
+14:04:27 [SUCCESS] Image converted to ICO: app-icon.png -> tmpmqtpbu.ico
+14:04:30 [INFO   ] ============================================
+14:04:30 [INFO   ] PSWrap v1.1.0 - PS2EXE Engine (Full PSHost)
+14:04:30 [INFO   ] ============================================
+14:04:30 [INFO   ] [~] Reading source script...
+14:04:30 [INFO   ] [+] Source: Computer Domain Assistant v3.4.ps1 (227235 bytes)
+14:04:30 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+14:04:30 [INFO   ] [~] Resolved 5 reference assemblies
+14:04:30 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico
+14:04:30 [INFO   ] [~] Embedding admin rights manifest
+14:04:30 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe.win32manifest"
+14:04:30 [INFO   ] [~] Embedded bundle: tmpnqutnd.bundle (1070086 bytes)
+14:04:30 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+14:04:30 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+14:04:30 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+14:04:30 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe.win32manifest" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpokh13i.cs" /resource:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.ps1","Computer Domain Assistant v3.4.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpnqutnd.bundle","tmpnqutnd.bundle"
+14:04:30 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+14:04:30 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:04:30 [INFO   ] Size: 1.36 MB
+14:04:30 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:04:35 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:04:37 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe ===
+14:04:37 [INFO   ] Loading certificate...
+14:04:37 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+14:04:37 [INFO   ] Importing CA to Intermediate store...
+14:04:38 [INFO   ] Waiting for file to be available...
+14:04:38 [INFO   ] Signing...
+14:04:40 [SUCCESS] Signing completed.
+14:04:40 [INFO   ] Signature status: Valid
+14:04:40 [SUCCESS] CA trusted.
+14:04:40 [INFO   ] Signature status after trust: Valid
+14:04:40 [SUCCESS] === Signing Complete ===
+14:13:16 [INFO   ] === PSWrap v1.1.0 Started ===
+14:13:39 [INFO   ] Build settings updated
+14:13:40 [INFO   ] All input fields have been reset
+14:13:50 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3
+14:13:50 [INFO   ] Auto-detected script: Computer Domain Assistant v3.4.ps1
+14:13:50 [INFO   ] Auto-detected icon: 4854186.ico
+14:13:54 [INFO   ] Build settings updated
+14:13:56 [INFO   ] Compilation process initiated...
+14:13:56 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.ps1
+14:13:56 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:13:56 [INFO   ] Icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico
+14:13:56 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3
+14:13:56 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+14:13:56 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+14:13:56 [INFO   ] [~] PS2EXE bundling 14 file(s)...
+14:13:56 [INFO   ] [+] Bundle created: 14 file(s), total 188807 bytes
+14:13:56 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+14:13:56 [INFO   ] [+] PS2EXE C# wrapper generated (21828 chars)
+14:13:56 [SUCCESS] Image converted to ICO: app-icon.png -> tmpvfsiyg.ico
+14:13:58 [INFO   ] ============================================
+14:13:58 [INFO   ] PSWrap v1.1.0 - PS2EXE Engine (Full PSHost)
+14:13:58 [INFO   ] ============================================
+14:13:58 [INFO   ] [~] Reading source script...
+14:13:58 [INFO   ] [+] Source: Computer Domain Assistant v3.4.ps1 (227377 bytes)
+14:13:58 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+14:13:58 [INFO   ] [~] Resolved 5 reference assemblies
+14:13:58 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico
+14:13:58 [INFO   ] [~] Embedding admin rights manifest
+14:13:58 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe.win32manifest"
+14:13:58 [INFO   ] [~] Embedded bundle: tmpdleju2.bundle (252214 bytes)
+14:13:58 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+14:13:58 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+14:13:58 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+14:13:58 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe.win32manifest" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpqlu0lf.cs" /resource:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.ps1","Computer Domain Assistant v3.4.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpdleju2.bundle","tmpdleju2.bundle"
+14:13:58 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+14:13:58 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:13:58 [INFO   ] Size: 591.00 KB
+14:13:58 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:14:25 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:14:26 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe ===
+14:14:26 [INFO   ] Loading certificate...
+14:14:26 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+14:14:26 [INFO   ] Importing CA to Intermediate store...
+14:14:27 [INFO   ] Waiting for file to be available...
+14:14:27 [INFO   ] Signing...
+14:14:29 [SUCCESS] Signing completed.
+14:14:29 [INFO   ] Signature status: Valid
+14:14:29 [SUCCESS] CA trusted.
+14:14:29 [INFO   ] Signature status after trust: Valid
+14:14:29 [SUCCESS] === Signing Complete ===
+14:17:13 [INFO   ] Application closing. Releasing resources...
+14:17:13 [INFO   ] === PSWrap closing ===
+14:18:17 [INFO   ] === PSWrap v1.1.0 Started ===
+14:18:24 [INFO   ] All input fields have been reset
+14:18:28 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3
+14:18:28 [INFO   ] Auto-detected script: Computer Domain Assistant v3.4.ps1
+14:18:28 [INFO   ] Auto-detected icon: 4854186.ico
+14:18:33 [INFO   ] Build settings updated
+14:18:43 [INFO   ] All input fields have been reset
+14:18:47 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3
+14:18:47 [INFO   ] Auto-detected script: Computer Domain Assistant v3.4.ps1
+14:18:47 [INFO   ] Auto-detected icon: 4854186.ico
+14:18:49 [INFO   ] Compilation process initiated...
+14:18:49 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.ps1
+14:18:49 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:18:49 [INFO   ] Icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico
+14:18:49 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3
+14:18:49 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+14:18:49 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+14:18:49 [INFO   ] [~] PS2EXE bundling 14 file(s)...
+14:18:49 [INFO   ] [+] Bundle created: 14 file(s), total 188807 bytes
+14:18:49 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+14:18:49 [INFO   ] [+] PS2EXE C# wrapper generated (22005 chars)
+14:18:49 [SUCCESS] Image converted to ICO: app-icon.png -> tmpzxly4b.ico
+14:18:50 [INFO   ] ============================================
+14:18:50 [INFO   ] PSWrap v1.1.0 - PS2EXE Engine (Full PSHost)
+14:18:50 [INFO   ] ============================================
+14:18:50 [INFO   ] [~] Reading source script...
+14:18:50 [INFO   ] [+] Source: Computer Domain Assistant v3.4.ps1 (227377 bytes)
+14:18:50 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+14:18:50 [INFO   ] [~] Resolved 5 reference assemblies
+14:18:50 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico
+14:18:50 [INFO   ] [~] Embedding admin rights manifest
+14:18:50 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe.win32manifest"
+14:18:50 [INFO   ] [~] Embedded bundle: tmpxo2vad.bundle (252214 bytes)
+14:18:50 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+14:18:50 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+14:18:50 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+14:18:50 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe.win32manifest" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpcgcya2.cs" /resource:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.ps1","Computer Domain Assistant v3.4.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpxo2vad.bundle","tmpxo2vad.bundle"
+14:18:50 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+14:18:50 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:18:50 [INFO   ] Size: 592.00 KB
+14:18:50 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:18:59 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:19:00 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe ===
+14:19:00 [INFO   ] Loading certificate...
+14:19:00 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+14:19:00 [INFO   ] Importing CA to Intermediate store...
+14:19:00 [INFO   ] Waiting for file to be available...
+14:19:00 [INFO   ] Signing...
+14:19:02 [SUCCESS] Signing completed.
+14:19:02 [INFO   ] Signature status: Valid
+14:19:02 [SUCCESS] CA trusted.
+14:19:02 [INFO   ] Signature status after trust: Valid
+14:19:02 [SUCCESS] === Signing Complete ===
+14:20:24 [INFO   ] Application closing. Releasing resources...
+14:20:24 [INFO   ] === PSWrap closing ===
+14:22:51 [INFO   ] === PSWrap v1.1.0 Started ===
+14:22:56 [INFO   ] All input fields have been reset
+14:23:02 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3
+14:23:02 [INFO   ] Auto-detected script: Computer Domain Assistant v3.4.ps1
+14:23:02 [INFO   ] Auto-detected icon: 4854186.ico
+14:23:22 [INFO   ] Build settings updated
+14:23:24 [INFO   ] Compilation process initiated...
+14:23:24 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.ps1
+14:23:24 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:23:24 [INFO   ] Icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico
+14:23:24 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3
+14:23:24 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+14:23:24 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+14:23:24 [INFO   ] [~] PS2EXE bundling 15 file(s)...
+14:23:24 [INFO   ] [+] Bundle created: 15 file(s), total 803247 bytes
+14:23:24 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+14:23:24 [INFO   ] [+] PS2EXE C# wrapper generated (22005 chars)
+14:23:24 [SUCCESS] Image converted to ICO: app-icon.png -> tmpvc4cgs.ico
+14:23:26 [INFO   ] ============================================
+14:23:26 [INFO   ] PSWrap v1.1.0 - PS2EXE Engine (Full PSHost)
+14:23:26 [INFO   ] ============================================
+14:23:26 [INFO   ] [~] Reading source script...
+14:23:26 [INFO   ] [+] Source: Computer Domain Assistant v3.4.ps1 (227377 bytes)
+14:23:26 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+14:23:26 [INFO   ] [~] Resolved 5 reference assemblies
+14:23:26 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico
+14:23:26 [INFO   ] [~] Embedding admin rights manifest
+14:23:26 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe.win32manifest"
+14:23:26 [INFO   ] [~] Embedded bundle: tmp22oij5.bundle (1071506 bytes)
+14:23:26 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+14:23:26 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+14:23:26 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+14:23:26 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe.win32manifest" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpohzrmc.cs" /resource:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.ps1","Computer Domain Assistant v3.4.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmp22oij5.bundle","tmp22oij5.bundle"
+14:23:26 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+14:23:26 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:23:26 [INFO   ] Size: 1.36 MB
+14:23:26 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:24:34 [INFO   ] All input fields have been reset
+14:24:39 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3
+14:24:39 [INFO   ] Auto-detected script: Computer Domain Assistant v3.4.ps1
+14:24:39 [INFO   ] Auto-detected icon: 4854186.ico
+14:24:44 [INFO   ] Build settings updated
+14:24:46 [INFO   ] Compilation process initiated...
+14:24:46 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.ps1
+14:24:46 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:24:46 [INFO   ] Icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico
+14:24:46 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3
+14:24:46 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+14:24:46 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+14:24:46 [INFO   ] [~] PS2EXE bundling 14 file(s)...
+14:24:46 [INFO   ] [+] Bundle created: 14 file(s), total 188807 bytes
+14:24:46 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+14:24:46 [INFO   ] [+] PS2EXE C# wrapper generated (22005 chars)
+14:24:46 [SUCCESS] Image converted to ICO: app-icon.png -> tmpmwxxhc.ico
+14:24:47 [INFO   ] ============================================
+14:24:47 [INFO   ] PSWrap v1.1.0 - PS2EXE Engine (Full PSHost)
+14:24:47 [INFO   ] ============================================
+14:24:47 [INFO   ] [~] Reading source script...
+14:24:47 [INFO   ] [+] Source: Computer Domain Assistant v3.4.ps1 (227377 bytes)
+14:24:47 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+14:24:47 [INFO   ] [~] Resolved 5 reference assemblies
+14:24:47 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico
+14:24:47 [INFO   ] [~] Embedding admin rights manifest
+14:24:47 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe.win32manifest"
+14:24:47 [INFO   ] [~] Embedded bundle: tmpnzovvz.bundle (252214 bytes)
+14:24:47 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+14:24:47 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+14:24:47 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+14:24:47 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\4854186.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe.win32manifest" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmplgcsrb.cs" /resource:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.ps1","Computer Domain Assistant v3.4.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpnzovvz.bundle","tmpnzovvz.bundle"
+14:24:47 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+14:24:47 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:24:47 [INFO   ] Size: 592.00 KB
+14:24:47 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:24:51 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe
+14:24:52 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\QU GUI Tool\v3.3\Computer Domain Assistant v3.4.exe ===
+14:24:52 [INFO   ] Loading certificate...
+14:24:52 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+14:24:52 [INFO   ] Importing CA to Intermediate store...
+14:24:53 [INFO   ] Waiting for file to be available...
+14:24:53 [INFO   ] Signing...
+14:24:55 [SUCCESS] Signing completed.
+14:24:55 [INFO   ] Signature status: Valid
+14:24:55 [SUCCESS] CA trusted.
+14:24:55 [INFO   ] Signature status after trust: Valid
+14:24:55 [SUCCESS] === Signing Complete ===
+14:26:10 [INFO   ] All input fields have been reset
+14:26:27 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6
+14:26:27 [INFO   ] Auto-detected script: CiscoSecureClient-Assistant-v1.6.ps1
+14:26:27 [INFO   ] Auto-detected icon: CiscoSecureClient.ico
+14:26:33 [INFO   ] Build settings updated
+14:26:35 [INFO   ] Compilation process initiated...
+14:26:35 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient-Assistant-v1.6.ps1
+14:26:35 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient-Assistant-v1.6.exe
+14:26:35 [INFO   ] Icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient.ico
+14:26:35 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6
+14:26:35 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+14:26:35 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+14:26:35 [INFO   ] [~] PS2EXE bundling 5 file(s)...
+14:26:35 [INFO   ] [+] Bundle created: 5 file(s), total 46523 bytes
+14:26:35 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+14:26:35 [INFO   ] [+] PS2EXE C# wrapper generated (22017 chars)
+14:26:35 [SUCCESS] Image converted to ICO: app-icon.png -> tmpkjexst.ico
+14:26:36 [INFO   ] ============================================
+14:26:36 [INFO   ] PSWrap v1.1.0 - PS2EXE Engine (Full PSHost)
+14:26:36 [INFO   ] ============================================
+14:26:36 [INFO   ] [~] Reading source script...
+14:26:36 [INFO   ] [+] Source: CiscoSecureClient-Assistant-v1.6.ps1 (94072 bytes)
+14:26:36 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+14:26:36 [INFO   ] [~] Resolved 5 reference assemblies
+14:26:36 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient.ico
+14:26:36 [INFO   ] [~] Embedding admin rights manifest
+14:26:36 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient-Assistant-v1.6.exe.win32manifest"
+14:26:36 [INFO   ] [~] Embedded bundle: tmpqnu2l4.bundle (62152 bytes)
+14:26:36 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+14:26:36 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+14:26:36 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+14:26:36 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient-Assistant-v1.6.exe.win32manifest" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient-Assistant-v1.6.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpkwr5cg.cs" /resource:"C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient-Assistant-v1.6.ps1","CiscoSecureClient-Assistant-v1.6.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpqnu2l4.bundle","tmpqnu2l4.bundle"
+14:26:36 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+14:26:36 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient-Assistant-v1.6.exe
+14:26:36 [INFO   ] Size: 187.50 KB
+14:26:36 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient-Assistant-v1.6.exe
+14:26:46 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient-Assistant-v1.6.exe
+14:26:48 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\QU GUI Tool\CiscoSecureClient-Assistant-v1.6\CiscoSecureClient-Assistant-v1.6.exe ===
+14:26:48 [INFO   ] Loading certificate...
+14:26:48 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+14:26:48 [INFO   ] Importing CA to Intermediate store...
+14:26:48 [INFO   ] Waiting for file to be available...
+14:26:48 [INFO   ] Signing...
+14:26:50 [SUCCESS] Signing completed.
+14:26:50 [INFO   ] Signature status: Valid
+14:26:50 [SUCCESS] CA trusted.
+14:26:51 [INFO   ] Signature status after trust: Valid
+14:26:51 [SUCCESS] === Signing Complete ===
+14:28:27 [INFO   ] Application closing. Releasing resources...
+14:28:27 [INFO   ] === PSWrap closing ===
+14:29:07 [INFO   ] === PSWrap v1.1.0 Started ===
+14:29:11 [INFO   ] All input fields have been reset
+14:30:29 [INFO   ] Application closing. Releasing resources...
+14:30:29 [INFO   ] === PSWrap closing ===
+14:30:33 [INFO   ] === PSWrap v1.1.0 Started ===
+14:30:38 [INFO   ] Application closing. Releasing resources...
+14:30:38 [INFO   ] === PSWrap closing ===
+14:31:06 [INFO   ] === PSWrap v1.1.0 Started ===
+14:31:13 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\PSWrap - Copy
+14:31:13 [INFO   ] Auto-detected script: PSWrap.ps1
+14:31:22 [INFO   ] Build settings updated
+14:31:24 [INFO   ] Compilation process initiated...
+14:31:24 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1
+14:31:24 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+14:31:24 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\PSWrap - Copy
+14:31:24 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+14:31:24 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+14:31:24 [INFO   ] [~] PS2EXE bundling 44 file(s)...
+14:31:24 [INFO   ] [+] Bundle created: 44 file(s), total 1575853 bytes
+14:31:24 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+14:31:24 [INFO   ] [+] PS2EXE C# wrapper generated (22017 chars)
+14:31:24 [SUCCESS] Image converted to ICO: app-icon.png -> tmpfu4qj5.ico
+14:31:25 [INFO   ] ============================================
+14:31:25 [INFO   ] PSWrap v1.1.0 - PS2EXE Engine (Full PSHost)
+14:31:25 [INFO   ] ============================================
+14:31:25 [INFO   ] [~] Reading source script...
+14:31:25 [INFO   ] [+] Source: PSWrap.ps1 (2955 bytes)
+14:31:25 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+14:31:25 [INFO   ] [~] Resolved 5 reference assemblies
+14:31:25 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmpfu4qj5.ico
+14:31:25 [INFO   ] [~] Embedding admin rights manifest
+14:31:25 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpfu4qj5.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe.win32manifest"
+14:31:25 [INFO   ] [~] Embedded bundle: tmpspkujx.bundle (2103023 bytes)
+14:31:25 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+14:31:25 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+14:31:25 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+14:31:25 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpfu4qj5.ico" "/win32manifest:C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe.win32manifest" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmptho55y.cs" /resource:"C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmpspkujx.bundle","tmpspkujx.bundle"
+14:31:25 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+14:31:25 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+14:31:25 [INFO   ] Size: 2.17 MB
+14:31:25 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+14:31:32 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe
+14:31:34 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\PSWrap - Copy\PSWrap.exe ===
+14:31:34 [INFO   ] Loading certificate...
+14:31:34 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+14:31:34 [INFO   ] Importing CA to Intermediate store...
+14:31:34 [INFO   ] Waiting for file to be available...
+14:31:34 [INFO   ] Signing...
+14:31:34 [SUCCESS] Signing completed.
+14:31:34 [INFO   ] Signature status: Valid
+14:31:34 [SUCCESS] CA trusted.
+14:31:35 [INFO   ] Signature status after trust: Valid
+14:31:35 [SUCCESS] === Signing Complete ===
+14:31:38 [INFO   ] Application closing. Releasing resources...
+14:31:38 [INFO   ] === PSWrap closing ===

@@ -39,6 +39,10 @@
     The tool auto-restarts with powershell.exe -STA when needed.
 #>
 
+# Load WPF core assemblies required for the GUI infrastructure.
+# PresentationFramework provides the WPF windowing/controls framework.
+# PresentationCore provides low-level WPF primitives (media, animation).
+# WindowsBase provides WPF base types (dependency objects, dispatcher).
 try {
     Add-Type -AssemblyName PresentationFramework, PresentationCore, WindowsBase -ErrorAction Stop | Out-Null
     Add-Type -AssemblyName System.Windows.Forms -ErrorAction Stop | Out-Null
@@ -48,6 +52,10 @@ try {
     Write-Error "Failed to load required WPF assemblies: $($_.Exception.Message)"
     exit 1
 }
+
+# WPF requires Single-Threaded Apartment (STA) mode. PowerShell 7+ does not
+# support STA; this check warns the user but does not exit because Startup.ps1
+# handles automatic restart with powershell.exe -STA when needed.
 try {
     if ($PSVersionTable -and $PSVersionTable.PSVersion) {
         if ($PSVersionTable.PSVersion.Major -ge 7) {

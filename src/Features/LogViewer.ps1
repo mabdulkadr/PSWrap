@@ -72,8 +72,23 @@ $logViewerXaml = @'
 </Window>
 '@
 
-# Opens a modal log viewer window displaying color-coded entries from the ring buffer.
 function Show-LogViewer {
+<#
+.SYNOPSIS
+    Opens the Activity Log viewer sub-window.
+
+.DESCRIPTION
+    Renders a XAML sub-window containing a RichTextBox that displays in-memory log
+    entries color-coded by severity level. Includes Copy and Clear buttons for
+    clipboard export and log buffer reset.
+
+.NOTES
+    Resource dictionaries from the main window are cloned into the Log Viewer
+    window to inherit theme-aware brushes (DynamicResource resolution). Log entries
+    are rendered into the RichTextBox content model using FlowDocument Paragraphs
+    and Run elements. Clipboard export uses [System.Windows.Clipboard]::SetText
+    with a PowerShell Set-Clipboard fallback.
+#>
     try {
         $clean = $logViewerXaml -replace '[\uFEFF\u200B\u200C\u200D\u200E\u200F\u202A-\u202E]', ''
         $reader = [System.Xml.XmlNodeReader]::new(([xml]$clean))

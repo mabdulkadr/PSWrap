@@ -603,3 +603,69 @@
 10:05:11 [SUCCESS] === Signing Complete ===
 10:06:19 [INFO   ] Application closing. Releasing resources...
 10:06:19 [INFO   ] === PSWrap closing ===
+10:06:39 [INFO   ] === PSWrap v1.0.0 Started ===
+10:06:42 [INFO   ] All input fields have been reset
+10:06:48 [INFO   ] Project folder: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap
+10:06:48 [INFO   ] Auto-detected script: PSWrap.ps1
+10:06:51 [INFO   ] Build settings updated
+10:06:54 [INFO   ] Compilation process initiated...
+10:06:54 [INFO   ] Source: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.ps1
+10:06:54 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+10:06:54 [INFO   ] Bundle: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap
+10:06:54 [INFO   ] Using PS2EXE Advanced Engine (full PowerShell host)
+10:06:54 [INFO   ] Initializing PS2EXE engine - building C# host wrapper...
+10:06:54 [INFO   ] [~] PS2EXE bundling 42 file(s)...
+10:06:54 [INFO   ] [+] Bundle created: 42 file(s), total 1417012 bytes
+10:06:54 [INFO   ] Generating PS2EXE C# wrapper with full PSHost...
+10:06:54 [INFO   ] [+] PS2EXE C# wrapper generated (21732 chars)
+10:06:54 [SUCCESS] Image converted to ICO: app-icon.png -> tmpmucgqm.ico
+10:06:55 [INFO   ] ============================================
+10:06:55 [INFO   ] ============================================
+10:06:55 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+10:06:55 [INFO   ] ============================================
+10:06:55 [INFO   ] [~] Reading source script...
+10:06:55 [INFO   ] [+] Source: PSWrap.ps1 (2445 bytes)
+10:06:55 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:06:55 [INFO   ] [~] Resolved 5 reference assemblies
+10:06:55 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmpmucgqm.ico
+10:06:55 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpmucgqm.ico"
+10:06:55 [INFO   ] [~] Embedded bundle: tmp500pjj.bundle (1891178 bytes)
+10:06:55 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:06:55 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:06:55 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:06:55 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpmucgqm.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpmuckjz.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmp500pjj.bundle","tmp500pjj.bundle"
+10:06:55 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:06:55 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+10:06:55 [INFO   ] Size: 1.97 MB
+10:06:55 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+10:06:56 [INFO   ] PSWrap v2.0 - PS2EXE Engine (Full PSHost)
+10:06:56 [INFO   ] ============================================
+10:06:56 [INFO   ] [~] Reading source script...
+10:06:56 [INFO   ] [+] Source: PSWrap.ps1 (2445 bytes)
+10:06:56 [INFO   ] [~] Using PS2EXE C# wrapper with full PSHost...
+10:06:56 [INFO   ] [~] Resolved 5 reference assemblies
+10:06:56 [INFO   ] [~] Embedding icon: C:\Users\m.abdelkader\AppData\Local\Temp\tmpmucgqm.ico
+10:06:56 [INFO   ] CompilerOptions: /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpmucgqm.ico"
+10:06:56 [INFO   ] [~] Embedded bundle: tmp500pjj.bundle (1891178 bytes)
+10:06:56 [INFO   ] [~] Compiling PS2EXE engine via C# CodeDOM...
+10:06:56 [INFO   ] [i] CodeDOM not available, falling back to csc.exe...
+10:06:56 [INFO   ] [~] Compiling PS2EXE engine with csc.exe: C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe
+10:06:56 [INFO   ] "C:\WINDOWS\Microsoft.NET\Framework64\v4.0.30319\csc.exe" /nologo /platform:anycpu /target:winexe /optimize+ "/win32icon:C:\Users\m.abdelkader\AppData\Local\Temp\tmpmucgqm.ico" /r:System.dll /r:System.Core.dll /r:System.Windows.Forms.dll /r:"C:\Windows\Microsoft.NET\assembly\GAC_MSIL\System.Management.Automation\v4.0_3.0.0.0__31bf3856ad364e35\System.Management.Automation.dll" /r:System.Drawing.dll /out:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe" "C:\Users\m.abdelkader\AppData\Local\Temp\tmpmuckjz.cs" /resource:"C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.ps1","PSWrap.ps1" /resource:"C:\Users\m.abdelkader\AppData\Local\Temp\tmp500pjj.bundle","tmp500pjj.bundle"
+10:06:56 [SUCCESS] *** COMPILATION SUCCESSFUL (PS2EXE Engine via csc.exe) ***
+10:06:56 [INFO   ] Output: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+10:06:56 [INFO   ] Size: 1.97 MB
+10:06:56 [SUCCESS] Executable: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+10:07:02 [INFO   ] Sign target: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe
+10:07:03 [INFO   ] === Signing: C:\Users\m.abdelkader\Downloads\Gui Tools\PSWrap\PSWrap.exe ===
+10:07:03 [INFO   ] Loading certificate...
+10:07:03 [INFO   ] Signer: CN=PsWrapCert Code Signing, O=PsWrapCert, L=Austin, S=Texas, C=US
+10:07:03 [INFO   ] Importing CA to Intermediate store...
+10:07:03 [INFO   ] Waiting for file to be available...
+10:07:03 [INFO   ] Signing...
+10:07:05 [SUCCESS] Signing completed.
+10:07:05 [INFO   ] Signature status: Valid
+10:07:05 [SUCCESS] CA trusted.
+10:07:05 [INFO   ] Signature status after trust: Valid
+10:07:05 [SUCCESS] === Signing Complete ===
+10:07:08 [INFO   ] Application closing. Releasing resources...
+10:07:08 [INFO   ] === PSWrap closing ===
