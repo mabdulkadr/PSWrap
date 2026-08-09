@@ -4,10 +4,10 @@
 
 | Field | Value |
 |---|---|
-| **Version** | 1.0.0 |
+| **Version** | 1.1.0 |
 | **Author** | admin |
 | **Created** | 2026-06-17 |
-| **Updated** | 2026-06-22 |
+| **Updated** | 2026-08-09 |
 | **Framework** | PowerShell 5.1+ / WPF / .NET 4.x |
 | **License** | All Rights Reserved |
 
@@ -36,21 +36,28 @@ The compiler supports companion file bundling, custom icons (with automatic imag
 - Built-in default app icon when no custom icon is specified
 
 ### Assembly Metadata
-- Version (e.g. `1.0.0.0`)
-- Product Name
-- File Description
-- Copyright
-- Company
-- Trademark
+- Auto-read from script comment-based help (`.TITLE`, `.SYNOPSIS`, `.VERSION`, `.AUTHOR`, `.DESCRIPTION`)
+- Supports `#requires -Version` for auto version detection
+- Manual override via Settings dialog for current session
+- Version (e.g. `1.1.0.0`)
+- Product Name, File Description, Copyright, Company, Trademark
 
 ### Compilation Options
 - **Output Type**: GUI application (no console) or Console application
+- **Console Host**: Windows Console Host mode for console apps
+- **Encoding**: Unicode output encoding support
+- **Credential GUI**: Enable credential prompt GUI
 - **Stream Control**: Suppress standard output, suppress error output
 - **Security**: Require administrator privileges (UAC manifest)
 - **Config**: Generate `.exe.config` file alongside executable
+- **Visual Styles**: Disable Windows visual styles
+- **DpiAware**: Enable DPI awareness
+- **Debug**: Prepare for debugging support
 - **Platform**: AnyCPU, x86, x64
 - **Thread Apartment**: STA (Single-Threaded), MTA (Multi-Threaded)
-- **Extra Arguments**: Custom `csc.exe` compiler arguments
+- **OS Support**: Long path support, virtualization, OS compatibility flags
+- **Save Icon**: Embed and save icon with executable
+- **LCID**: Custom locale identifier
 
 ### User Interface
 - Modern WPF interface with Tailwind Slate design system
@@ -84,6 +91,7 @@ The compiler supports companion file bundling, custom icons (with automatic imag
 
 | Version | Date | Highlights |
 |---|---|---|---|
+| **1.1.0** | 2026-08-09 | Auto-read metadata from script (`.TITLE`, `.SYNOPSIS`, `.VERSION`, `.AUTHOR`, `.DESCRIPTION`, `#requires -Version`), expanded compilation options (ConHost, Unicode, CredentialGUI, NoVisualStyles, DPI, Debug, LongPaths), full code documentation, bug fixes (Run as Admin, ProgressBar hit-test, settings restore), Arabic UI |
 | 1.2.0 | 2026-06-23 | Bundle extraction fix (stream-based line reading, remove double Base64), dot-source `__main.ps1` for correct `$PSScriptRoot`, About dialog perf (ReadAllLines + persistent cache), fix `-Include` bug in icon auto-detect, responsive input fields (remove MaxWidth) |
 | 1.1.0 | 2026-06-22 | Default app icon, KPI redesign (Last Compile/Source Size/OS Target/Output Type), PS Core GAC SMA fallback, toast notification fix, footer update |
 | 2.1.0 | 2026-06-21 | Fully responsive layout, settings dialog resize, font fixes |

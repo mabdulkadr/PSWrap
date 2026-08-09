@@ -26,7 +26,7 @@ $script:isBusy          = $false                    # Busy state flag
 $script:activeRunspace  = $null                     # Background runspace reference
 $script:asyncResult     = $null                     # Async compilation result
 $script:asyncPowerShell = $null                     # PowerShell instance for async ops
-$script:dlgState = @{ Ok = $false; Ver = '1.0.0.0'; Prod = ''; Desc = ''; Copy = ''; Comp = ''; Trade = ''; NoCon = $true; SOut = $true; SErr = $true; Adm = $false; Cfg = $false; STA = $true; Plat = 0; Extra = ''; CopyIcon = $false; UsePS2EXE = $false }  # Build options state
+$script:dlgState = @{ Ok = $false; Ver = '1.1.0.0'; Prod = ''; Desc = ''; Copy = ''; Comp = ''; Trade = ''; NoCon = $true; SOut = $true; SErr = $true; Adm = $false; Cfg = $false; STA = $true; Plat = 0; LCID = ''; Extra = ''; CopyIcon = $false; UsePS2EXE = $false; NoVisual = $false; ExitCancel = $false; DPI = $false; Debug = $false; SupportOS = $false; Virtual = $false; LongPaths = $false; ConHost = $false; UnicodeEnc = $false; CredGUI = $false }  # Build options state
 $script:tempIconFiles = New-Object System.Collections.ArrayList  # Temporary icon files to clean up
 $script:DefaultIconPath = Join-Path $script:RootDir 'images\app-icon.png'  # Default application icon
 $script:CompilationCount = 0                        # Successful compilation counter
@@ -162,7 +162,7 @@ function Invoke-CompileExePS2EXE {
     .PARAMETER BundleFolder
         Optional folder path containing companion files to embed.
     .PARAMETER Version
-        Assembly version string (default: '1.0.0.0').
+        Assembly version string (default: '1.1.0.0').
     .PARAMETER FileDescription
         Assembly file description.
     .PARAMETER ProductName
@@ -188,7 +188,7 @@ function Invoke-CompileExePS2EXE {
         [Parameter(Mandatory)][string]$OutputPath,
         [string]$IconPath,
         [string]$BundleFolder,
-        [string]$Version = '1.0.0.0',
+        [string]$Version = '1.1.0.0',
         [string]$FileDescription = '',
         [string]$ProductName = '',
         [string]$Copyright = '',
@@ -746,7 +746,7 @@ function Invoke-CompileExePS2EXE {
         }
 
         LogMsg '============================================'
-        LogMsg '  PSWrap v2.0 - PS2EXE Engine (Full PSHost)'
+        LogMsg '  PSWrap v1.1.0 - PS2EXE Engine (Full PSHost)'
         LogMsg '============================================'
         LogMsg '[~] Reading source script...'
         $scriptContent = Get-Content -Path $src -Raw
@@ -764,6 +764,7 @@ function Invoke-CompileExePS2EXE {
             Where-Object { $_.ManifestModule.Name -ieq 'System.Management.Automation.dll' } | Select-Object -First 1
         if ($smaAsm) { $null = $referenceAssemblies.Add($smaAsm.Location) }
 
+        # Resolve System.Windows.Forms by AssemblyName (strong name); fallback to scanning loaded assemblies
         try {
             $n = New-Object System.Reflection.AssemblyName('System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089')
             [System.AppDomain]::CurrentDomain.Load($n) | Out-Null
@@ -772,6 +773,7 @@ function Invoke-CompileExePS2EXE {
             Where-Object { $_.ManifestModule.Name -ieq 'System.Windows.Forms.dll' } | Select-Object -First 1
         if ($wfAsm) { $null = $referenceAssemblies.Add($wfAsm.Location) }
 
+        # System.Drawing needed for icon handling in compiled EXE
         if ($noConsole) {
             try {
                 $n = New-Object System.Reflection.AssemblyName('System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a')
@@ -810,6 +812,7 @@ function Invoke-CompileExePS2EXE {
 
         $manifestOption = ''
         $manifestPath = ''
+        # Generate UAC manifest XML with requireAdministrator if admin mode was requested
         if ($reqAdmin) {
             $manifestPath = $out + '.win32manifest'
             $manifestXml = @"
@@ -834,6 +837,7 @@ function Invoke-CompileExePS2EXE {
         LogMsg "  CompilerOptions: $($cp.CompilerOptions)"
 
         $null = $cp.EmbeddedResources.Add($src)
+        # Embed each bundled file as a managed resource for runtime extraction
         if ($bundleResPath -and (Test-Path $bundleResPath)) {
             $null = $cp.EmbeddedResources.Add($bundleResPath)
             LogMsg "[~] Embedded bundle: $bundleResName ($([System.IO.File]::ReadAllBytes($bundleResPath).Length) bytes)"
@@ -865,6 +869,7 @@ function Invoke-CompileExePS2EXE {
         }
 
         if (-not $codeDOMsuccess) {
+            # Find csc.exe: check .NET Framework paths, then Roslyn NuGet fallback
             try {
                 $cscExe = $null
                 $baseDir = "$env:windir\Microsoft.NET"
@@ -978,7 +983,13 @@ function Invoke-CompileExePS2EXE {
     $script:asyncResult = $handle
 }
 
-# Safely stops and disposes the async compilation runspace, PowerShell instance, and result handle.
+<#
+.SYNOPSIS
+Stops and disposes the background PowerShell runspace and async operation.
+.DESCRIPTION
+Cancels the in-progress async PowerShell instance via Stop(), then disposes both the
+PowerShell object and its backing Runspace. Clears all script-scoped async state variables.
+#>
 function Stop-AsyncOperation {
     try {
         if ($script:asyncPowerShell -and $script:asyncResult -and -not $script:asyncResult.IsCompleted) {
@@ -990,7 +1001,14 @@ function Stop-AsyncOperation {
     $script:asyncPowerShell = $null; $script:asyncResult = $null; $script:activeRunspace = $null
 }
 
-# Scans the project folder for companion files and populates the bundle DataGrid.
+<#
+.SYNOPSIS
+Scans the project folder for companion files and builds the bundle files list.
+.DESCRIPTION
+Recursively enumerates all files in the project folder (excluding the source script itself),
+populates the bundleFiles collection with metadata including relative path and size, and
+updates the DataGrid bound to the bundle files list.
+#>
 function Update-BundleFilesList {
     $src = $script:txtSrcScript.Text.Trim()
     $pdir = $script:txtProjectFolder.Text.Trim()
@@ -1023,7 +1041,14 @@ function Update-BundleFilesList {
     }
 }
 
-# Refreshes all UI labels, bundle file list, and source file size display.
+<#
+.SYNOPSIS
+Refreshes the bundle count, package name, and source size labels from UI fields.
+.DESCRIPTION
+Reads the current source script and project folder paths from the UI, updates the
+bundle files list if a project folder is set, and refreshes the package name and
+source file size labels on the main form.
+#>
 function Update-UIState {
     $src = $script:txtSrcScript.Text.Trim()
     $pdir = $script:txtProjectFolder.Text.Trim()

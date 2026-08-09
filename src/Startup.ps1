@@ -40,6 +40,9 @@
     F5 key refreshes UI state. Window is shown as a modal dialog.
 #>
 
+# WPF requires STA (Single-Threaded Apartment) mode. PowerShell 7+ (pwsh.exe)
+# does not support STA. If running with MTA, attempt auto-restart with -STA flag.
+# For pwsh.exe, warn and continue (Startup.ps1 will handle gracefully).
 if ([System.Threading.Thread]::CurrentThread.GetApartmentState() -ne 'STA') {
     $processName = [System.IO.Path]::GetFileName((Get-Process -Id $pid).MainModule.FileName)
     if ($processName -ieq 'pwsh.exe') {
@@ -55,7 +58,10 @@ if ([System.Threading.Thread]::CurrentThread.GetApartmentState() -ne 'STA') {
     }
 }
 
-# Restore User Settings
+# ── Restore saved user preferences from %APPDATA%\PSWrap\settings.json ──
+# Theme, last-used file paths, build settings, and toast preference are restored.
+# The BuildSettings block uses a dynamic loop over dlgState.Keys so new keys
+# added in future versions are automatically supported.
 try {
     $script:AppSettings = @{ ToastEnabled = $true }
     $settings = Load-UserSettings
@@ -65,22 +71,13 @@ try {
         if ($null -ne $settings.ToastEnabled) {
             if ($script:chkToastEnabled) { $script:chkToastEnabled.IsChecked = $settings.ToastEnabled }
         }
-        if ($settings.LastProjectFolder) { $script:txtProjectFolder.Text = $settings.LastProjectFolder }
-        if ($settings.LastSourceScript) { $script:txtSrcScript.Text = $settings.LastSourceScript }
-        if ($settings.LastOutputPath) { $script:txtOutPath.Text = $settings.LastOutputPath }
-        if ($settings.LastIconPath -and (Test-Path $settings.LastIconPath)) { $script:txtIconPath.Text = $settings.LastIconPath }
         if ($settings.BuildSettings) {
-            foreach ($key in $script:dlgState.Keys) {
+            foreach ($key in @($script:dlgState.Keys)) {
+                if ($key -in 'Ver','Prod','Desc','Copy','Comp','Trade') { continue }
                 $val = $settings.BuildSettings.$key
                 if ($null -ne $val) { $script:dlgState.$key = $val }
             }
             $s = $script:dlgState
-            if ($script:txtOptVersion) { $script:txtOptVersion.Text = $s.Ver }
-            if ($script:txtOptProduct) { $script:txtOptProduct.Text = $s.Prod }
-            if ($script:txtOptDesc) { $script:txtOptDesc.Text = $s.Desc }
-            if ($script:txtOptCopyright) { $script:txtOptCopyright.Text = $s.Copy }
-            if ($script:txtOptCompany) { $script:txtOptCompany.Text = $s.Comp }
-            if ($script:txtOptTrademark) { $script:txtOptTrademark.Text = $s.Trade }
             if ($script:chkOptNoConsole) { $script:chkOptNoConsole.IsChecked = $s.NoCon }
             if ($script:chkOptNoOutput) { $script:chkOptNoOutput.IsChecked = $s.SOut }
             if ($script:chkOptNoError) { $script:chkOptNoError.IsChecked = $s.SErr }
@@ -91,26 +88,31 @@ try {
             if ($script:cboOptPlatform) { $script:cboOptPlatform.SelectedIndex = $s.Plat }
         }
     }
-} catch { }
+} catch { Write-Warning "Settings restore failed: $_" }
 
 Initialize-LogFile
 if ($script:FooterVersion) { $script:FooterVersion.Text = "Version $script:AppVersion" }
 
+# ── Window.Loaded: Theme application, icon initialization, state refresh ──
+# Runs once when the WPF Window is fully rendered.
 $script:Window.Add_Loaded({
     Set-Theme -Window $script:Window -IsDark $script:IsDarkMode
 
+    # Style CertSign nav button in inactive state (transparent background)
     if ($script:NavBtnCertSign) {
         $script:NavBtnCertSign.Background = [System.Windows.Media.Brushes]::Transparent
         $script:NavBtnCertSign.Foreground = $script:Window.TryFindResource('TextSecondaryBrush')
         $script:NavBtnCertSign.FontWeight = [System.Windows.FontWeights]::SemiBold
     }
 
+    # Set the correct theme toggle icon (moon for dark, sun for light)
     if ($script:IsDarkMode) {
         $script:ThemeIcon.Data = [System.Windows.Media.Geometry]::Parse($MoonIconData)
         $script:ThemeIcon.Fill = New-Brush '#CBD5E1'
         $script:ThemeToggleBtn.ToolTip = 'Switch to Light theme'
     }
 
+    # Load application icon from images/app-icon.png; convert to WPF BitmapSource
     $iconFile = Join-Path $script:RootDir 'images\app-icon.png'
     if (Test-Path $iconFile) {
         try {
@@ -120,11 +122,19 @@ $script:Window.Add_Loaded({
             $script:Window.Icon = $iconSrc; $img.Dispose()
         } catch { Add-LogLine "Could not load application icon from file: $_" 'WARNING' }
     }
+
+    # Initial UI state refresh: populate bundle list, file sizes, etc.
     Update-UIState
+
+    # ProgressBar is a visual-only indicator; disable hit testing so it
+    # doesn't intercept mouse clicks on nearby buttons (e.g. btnSettings).
+    if ($script:ProgressBar) { $script:ProgressBar.IsHitTestVisible = $false }
 }) | Out-Null
 
+# F5 hotkey: manually refresh UI state (bundle list, file sizes, path indicators)
 $script:Window.Add_KeyDown({
     if ($_.Key -eq 'F5') { $_.Handled = $true; Update-UIState; Add-LogLine -Message 'Interface refreshed via F5' -Level 'INFO' }
 }) | Out-Null
 
+# Show the main window as a modal dialog (blocks until window closes)
 $null = $script:Window.ShowDialog()
