@@ -665,6 +665,9 @@ function Invoke-CompileExePS2EXE {
                 Assembly executingAssembly = Assembly.GetExecutingAssembly();
                 string scriptDir = System.IO.Path.Combine(System.IO.Path.GetTempPath(), System.IO.Path.GetFileNameWithoutExtension(System.AppDomain.CurrentDomain.FriendlyName));
                 System.IO.Directory.CreateDirectory(scriptDir);
+                try { System.Reflection.Assembly.Load("PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"); } catch {}
+                try { System.Reflection.Assembly.Load("PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"); } catch {}
+                try { System.Reflection.Assembly.Load("WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35"); } catch {}
 '@)
     $null = $csharpCode.AppendLine($embedSection)
     $null = $csharpCode.AppendLine(@"
