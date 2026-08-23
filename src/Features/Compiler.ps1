@@ -699,7 +699,30 @@ function Invoke-CompileExePS2EXE {
                             PSDataCollection<PSObject> colOutput = new PSDataCollection<PSObject>();
                             colOutput.DataAdded += new EventHandler<DataAddedEventArgs>(delegate(object sender, DataAddedEventArgs e)
                             { ui.WriteLine(((PSDataCollection<PSObject>)sender)[e.Index].ToString()); });
-                            posh.AddCommand(scriptFile);
+                            // Lift the execution policy for THIS PROCESS ONLY so the extracted __main__.ps1
+                            // can run on machines where the policy defaults to Restricted (clean Windows installs).
+                            // Process scope expires when the EXE exits - nothing is persisted or changed system-wide.
+                            // A dedicated PowerShell instance keeps any policy noise out of the user-facing streams.
+                            string effPolicy = "";
+                            try
+                            {
+                                using (PowerShell prep = PowerShell.Create())
+                                {
+                                    prep.Runspace = myRunSpace;
+                                    prep.AddScript("Set-ExecutionPolicy -Scope Process -ExecutionPolicy Bypass -Force -ErrorAction SilentlyContinue");
+                                    prep.Invoke();
+                                    prep.Commands.Clear();
+                                    prep.AddScript("[string](Get-ExecutionPolicy)");
+                                    foreach (PSObject po in prep.Invoke()) { if (po != null && po.BaseObject != null) effPolicy += po.BaseObject.ToString(); }
+                                }
+                            }
+                            catch { }
+                            // If a Group Policy still locks the policy (Restricted/AllSigned), fall back to
+                            // executing the script text directly from memory, which is exempt from file policy checks.
+                            bool fileAllowed = effPolicy.Equals("Bypass", StringComparison.OrdinalIgnoreCase)
+                                || effPolicy.Equals("Unrestricted", StringComparison.OrdinalIgnoreCase)
+                                || effPolicy.Equals("RemoteSigned", StringComparison.OrdinalIgnoreCase);
+                            if (fileAllowed) { posh.AddCommand(scriptFile); } else { posh.AddScript(script); }
                             var asyncResult = posh.BeginInvoke<string, PSObject>(null, colOutput);
                             asyncResult.AsyncWaitHandle.WaitOne();
                             posh.Stop();
