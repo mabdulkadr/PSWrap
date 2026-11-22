@@ -1,6 +1,6 @@
 # PSWrap
 
-> **PowerShell Script to EXE Compiler** — Compile `.ps1` scripts into native Windows executables.
+> **PowerShell Script to EXE Compiler**: compile `.ps1` scripts into native Windows executables.
 
 | Field | Value |
 |---|---|
@@ -26,9 +26,9 @@ The compiler supports companion file bundling, custom icons (with automatic imag
 ### Compilation Engine
 - In-process C# CodeDOM compilation (falls back to `csc.exe` on PowerShell Core)
 - PS Core fallback uses .NET Framework SMA from GAC to avoid System.Runtime version conflicts
-- Script embedded as managed resource — no Base64 strings in generated code
-- Companion file bundling — embed entire project folders as embedded resources
-- Async compilation via background runspace — non-blocking UI with progress feedback
+- Script embedded as a managed resource, so there are no Base64 strings in generated code
+- Companion file bundling: embed entire project folders as embedded resources
+- Async compilation via a background runspace, with a non-blocking UI and progress feedback
 
 ### Icon Support
 - Custom `.ico` icon embedding
@@ -43,21 +43,21 @@ The compiler supports companion file bundling, custom icons (with automatic imag
 - Product Name, File Description, Copyright, Company, Trademark
 
 ### Compilation Options
-- **Output Type**: GUI application (no console) or Console application
-- **Console Host**: Windows Console Host mode for console apps
-- **Encoding**: Unicode output encoding support
-- **Credential GUI**: Enable credential prompt GUI
-- **Stream Control**: Suppress standard output, suppress error output
-- **Security**: Require administrator privileges (UAC manifest)
-- **Config**: Generate `.exe.config` file alongside executable
-- **Visual Styles**: Disable Windows visual styles
-- **DpiAware**: Enable DPI awareness
-- **Debug**: Prepare for debugging support
-- **Platform**: AnyCPU, x86, x64
-- **Thread Apartment**: STA (Single-Threaded), MTA (Multi-Threaded)
-- **OS Support**: Long path support, virtualization, OS compatibility flags
-- **Save Icon**: Embed and save icon with executable
-- **LCID**: Custom locale identifier
+- Output Type: GUI application (no console) or Console application
+- Console Host: Windows Console Host mode for console apps
+- Encoding: Unicode output encoding support
+- Credential GUI: Enable credential prompt GUI
+- Stream Control: Suppress standard output, suppress error output
+- Security: Require administrator privileges (UAC manifest)
+- Config: Generate `.exe.config` file alongside executable
+- Visual Styles: Disable Windows visual styles
+- DpiAware: Enable DPI awareness
+- Debug: Prepare for debugging support
+- Platform: AnyCPU, x86, x64
+- Thread Apartment: STA (Single-Threaded), MTA (Multi-Threaded)
+- OS Support: Long path support, virtualization, OS compatibility flags
+- Save Icon: Embed and save icon with executable
+- LCID: Custom locale identifier
 
 ### User Interface
 - Modern WPF interface with Tailwind Slate design system

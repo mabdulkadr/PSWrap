@@ -6,12 +6,15 @@
 
 A modern WPF tool that wraps `.ps1` scripts into native Windows executables — with Authenticode signing, icon embedding, and companion bundling built in.
 
-![License](https://img.shields.io/badge/license-MIT-blue.svg)
-![PowerShell](https://img.shields.io/badge/powershell-5.1%2B-blue.svg)
-![Platform](https://img.shields.io/badge/Windows-10%2F11-blue.svg)
-![UI](https://img.shields.io/badge/UI-WPF%20GUI-blue.svg)
-![Theme](https://img.shields.io/badge/Theme-Tailwind%20Slate-brightgreen.svg)
-![Version](https://img.shields.io/badge/version-1.1.0-green.svg)
+[![Mode](https://img.shields.io/badge/Mode-CLI-334155?style=for-the-badge)](#-usage)
+[![PowerShell](https://img.shields.io/badge/PowerShell-5.1%2B-5391FE?style=for-the-badge&logo=powershell&logoColor=white)](https://learn.microsoft.com/en-us/powershell/)
+[![Platform](https://img.shields.io/badge/Platform-Windows%2010%2F11-0F172A?style=for-the-badge)](#%EF%B8%8F-requirements)
+[![UI](https://img.shields.io/badge/UI-WPF%20Tailwind%20Slate-3B82F6?style=for-the-badge&logo=windows&logoColor=white)](#%EF%B8%8F-usage)
+[![Theme](https://img.shields.io/badge/Theme-Light%20%2F%20Dark-8B5CF6?style=for-the-badge)](#%EF%B8%8F-usage)
+[![License](https://img.shields.io/badge/License-MIT-F59E0B?style=for-the-badge)](#-license)
+[![Version](https://img.shields.io/badge/Version-1.1.0-334155?style=for-the-badge)](#-overview)
+
+[Overview](#-overview) • [Features](#-core-features) • [Usage](#-usage) • [Requirements](#%EF%B8%8F-requirements) • [License](#-license)
 
 </div>
 
@@ -19,9 +22,9 @@ A modern WPF tool that wraps `.ps1` scripts into native Windows executables — 
 
 # 📖 Overview
 
-**PSWrap** is a desktop application that compiles PowerShell scripts into standalone Windows executables using in-process C# CodeDOM compilation — no external packers, no Base64 blobs, no temp files. Your script is embedded as a managed resource and re-launched by native .NET hosting when the EXE runs.
+**PSWrap** is a desktop application that compiles PowerShell scripts into standalone Windows executables using in-process C# CodeDOM compilation, with no external packers, Base64 blobs, or temp files. Your script is embedded as a managed resource and relaunched by native .NET hosting when the EXE runs.
 
-It goes beyond compilation: generate your own code-signing certificate chain, sign the output with Authenticode (optional RFC 3161 timestamping), bundle companion files as embedded resources, and embed a custom icon — all from one window.
+You can also generate your own code-signing certificate chain, sign the output with Authenticode (optional RFC 3161 timestamping), bundle companion files as embedded resources, and embed a custom icon. All of it happens in one window.
 
 > **Repo:** [github.com/mabdulkadr/PSWrap](https://github.com/mabdulkadr/PSWrap)
 
@@ -36,29 +39,29 @@ It goes beyond compilation: generate your own code-signing certificate chain, si
 # ✨ Core Features
 
 ### 🔹 Compilation Engine
-* In-process **CodeDOM compilation** with automatic `csc.exe` fallback on PowerShell Core 7.x
-* Script embedded as a **managed resource** — clean decompilation story, no temp extraction
+* In-process CodeDOM compilation with automatic `csc.exe` fallback on PowerShell Core 7.x
+* Script embedded as a managed resource, which keeps decompilation clean and avoids temp extraction
 * Async, non-blocking builds with progress feedback
 * Full assembly metadata: version, description, product, copyright, company, trademark
 * Options: GUI vs Console output, suppress output/error streams, UAC manifest, config file, platform target, apartment state
 
 ### 🔹 Certificate Signing
-* Generates a self-signed **Root CA + Code Signing certificate chain** using pure .NET cryptography
-* Signs executables with **Authenticode**, optional RFC 3161 timestamping
+* Generates a self-signed Root CA + Code Signing certificate chain using pure .NET cryptography
+* Signs executables with Authenticode, with optional RFC 3161 timestamping
 * Ships with ready-to-use sample certificates in `cert\`
 
 ### 🔹 Bundling & Icons
 * Embed entire companion folders as resources, with selective inclusion checkboxes
-* Custom `.ico` embedding — or automatic conversion from PNG/JPG/BMP/GIF
+* Custom `.ico` embedding, or automatic conversion from PNG/JPG/BMP/GIF
 * Built-in default icon when none supplied
 
 ### 🔹 Smart Detection & UI
 * Selecting a project folder auto-detects the `.ps1` source and `.ico` icon
-* Dark/Light theme — Tailwind Slate tokens with instant switching
+* Dark/Light theme using Tailwind Slate tokens with instant switching
 * Toast notifications, KPI stat cards (Last Compile, Source Size, OS Target, Output Type, PS Version)
 * Drag & drop `.ps1` files straight onto the window
 * Live log viewer inside the app
-* Persistent settings — theme, paths, and build config saved to `%APPDATA%\PSWrap\settings.json`
+* Persistent settings: theme, paths, and build config saved to `%APPDATA%\PSWrap\settings.json`
 
 ---
 
@@ -109,13 +112,13 @@ Or double-click `PSWrap.ps1`, or run the pre-built `PSWrap.exe`.
 
 ### Compile a script
 
-1. **Select Project Folder** *(optional)* — auto-detects your `.ps1` and `.ico`
-2. **Select Source Script** — browse or drag-and-drop
-3. **Set Output Path** — where the `.exe` will be written
-4. **Choose Icon** *(optional)* — `.ico`, or any image for auto-conversion
-5. **Configure** *(optional)* — metadata, output type, platform, bundling
-6. **Compile to EXE** — runs async; watch progress in the live log
-7. **Sign** *(optional)* — generate a code-signing chain and sign with timestamp
+1. Select Project Folder (optional): auto-detects your `.ps1` and `.ico`
+2. Select Source Script: browse or drag-and-drop
+3. Set Output Path: where the `.exe` will be written
+4. Choose Icon (optional): `.ico`, or any image for auto-conversion
+5. Configure (optional): metadata, output type, platform, bundling
+6. Compile to EXE: runs async; watch progress in the live log
+7. Sign (optional): generate a code-signing chain and sign with timestamp
 
 ---
 
@@ -139,17 +142,17 @@ Settings: %APPDATA%\PSWrap\settings.json
 
 # 🛡 Operational Notes
 
-* **Signing trust model** — generated certificates are self-signed; distribute `PsWrapCert.ca.crt` to machines that must trust your signed EXEs, or use the TrustRoot option (admin) during generation
-* **Antivirus false positives** — unsigned/uncommon EXEs may be flagged; Authenticode signing significantly reduces this
-* **Source of truth** — always keep the original `.ps1`; treat compiled EXEs as build artifacts
-* **Execution policy** — the compiled EXE hosts PowerShell itself, so target machines do not need script execution policy changes
-* Compiled output inherits your script's behavior — test in staging before distributing
+* Signing trust model: generated certificates are self-signed; distribute `PsWrapCert.ca.crt` to machines that must trust your signed EXEs, or use the TrustRoot option (admin) during generation
+* Antivirus false positives: unsigned or uncommon EXEs may be flagged; Authenticode signing reduces this
+* Source of truth: always keep the original `.ps1`; treat compiled EXEs as build artifacts
+* Execution policy: the compiled EXE hosts PowerShell itself, so target machines do not need script execution policy changes
+* Compiled output inherits your script's behavior, so test in staging before distributing
 
 ---
 
 ## 👤 Author
 
-**Mohammad Abdulkader Omar**  
+**Mohammad Abdelkader Omar**  
 GitHub: [@mabdulkadr](https://github.com/mabdulkadr)  
 Website: [momar.tech](https://momar.tech)  
 

@@ -8,9 +8,9 @@
 
 ### Prerequisites
 
-- **Windows 7+** (Windows 10/11 recommended)
-- **PowerShell 5.1** (Windows PowerShell — also supports PowerShell Core 7.x)
-- **.NET Framework 4.7.2+** (included with Windows 10/11)
+- Windows 7+ (Windows 10/11 recommended)
+- PowerShell 5.1 (Windows PowerShell, which also supports PowerShell Core 7.x)
+- .NET Framework 4.7.2+ (included with Windows 10/11)
 
 ### Launch
 
@@ -75,20 +75,20 @@ Or double-click `Start-PSWrap.ps1` in File Explorer.
 
 Click **Browse** (green folder button) next to "Project Folder" to select a folder containing your `.ps1` files.
 
-**Auto-detection:** When you select a folder, PSWrap automatically:
+When you select a folder, PSWrap automatically:
 - Finds the first `.ps1` file and fills the "Source Script" field
 - Finds the first `.ico` file for the icon
-- If no `.ico` found, looks for PNG/JPG/BMP/GIF and auto-converts to `.ico`
+- If no `.ico` is found, looks for PNG/JPG/BMP/GIF and converts to `.ico`
 - Sets the output path to `<scriptname>.exe` in the same folder
 
 ### Step 2: Select Source Script
 
 Click **Browse** (blue document button) next to "Source Script" to select your `.ps1` file.
 
-**Alternative: Drag & Drop**
+Alternatively, drag and drop:
 - Drag any `.ps1` file from File Explorer onto the PSWrap window
-- The source script field auto-fills
-- If output path is empty, it auto-sets to `<scriptname>.exe`
+- The source script field fills in automatically
+- If the output path is empty, it defaults to `<scriptname>.exe`
 
 ### Step 3: Set Output Path
 
@@ -97,8 +97,8 @@ Click **Browse** (blue download button) next to "Output Path" to choose where th
 ### Step 4: Choose Custom Icon (Optional)
 
 Click **Browse** (outline image button) next to "Custom Icon" to select:
-- `.ico` file — used directly
-- PNG/JPG/BMP/GIF — auto-converted to `.ico` with 16, 32, 48, and 256px resolutions
+- `.ico` file, used directly
+- PNG/JPG/BMP/GIF, converted to `.ico` with 16, 32, 48, and 256px resolutions
 
 If no icon is selected, the built-in default app icon is used.
 
@@ -136,15 +136,15 @@ Click the **Settings** button to open the Build Settings dialog:
 
 Click **Compile to EXE** to start compilation.
 
-**During compilation:**
+During compilation:
 - UI buttons are disabled
-- Progress bar shows indeterminate animation
-- Status bar shows progress messages
+- The progress bar shows an indeterminate animation
+- The status bar shows progress messages
 
-**After completion:**
-- Success toast appears with green check
+After completion:
+- A success toast appears with a green check
 - Log entries show compilation details
-- `KpiLastCompile` timestamp updates
+- The `KpiLastCompile` timestamp updates
 - Click **Open Output** to open the output folder in Explorer
 
 ---
@@ -189,7 +189,7 @@ Toasts auto-dismiss after 3 seconds (200ms fade-in, 3s display, 300ms fade-out).
 
 Click **Logs** in the sidebar footer to open the Log Viewer sub-window.
 
-**Features:**
+Features:
 - Color-coded entries by level (blue=INFO, green=SUCCESS, yellow=WARNING, red=ERROR)
 - Copy all entries to clipboard
 - Clear all entries
@@ -232,11 +232,11 @@ PSWrap adapts to different window sizes:
 | **<900px** (narrow) | Inputs remain usable, action buttons wrap to multiple rows |
 | **Minimum (900x600)** | All content accessible via vertical scroll |
 
-**Key responsive behaviors:**
-- KPI stat cards: Grid with 5 equal `*` columns, auto-scale with window width
-- Action buttons: WrapPanel wraps to next line on narrow windows
-- Input fields: Expand to fill available space up to `MaxWidth=600`
-- Horizontal scrollbar: Disabled — content wraps or clips instead of overflowing
+Key responsive behaviors:
+- KPI stat cards: Grid with 5 equal `*` columns, scaling with window width
+- Action buttons: WrapPanel moves to the next line on narrow windows
+- Input fields: expand to fill available space up to `MaxWidth=600`
+- Horizontal scrollbar: disabled, so content wraps or clips instead of overflowing
 
 ---
 
@@ -267,7 +267,7 @@ Session logs are written to `logs/PSWrap_YYYYMMDD.log` (one file per day) in the
 
 ### "CodeDOM not available"
 
-**.NET Framework 4.x SDK is missing.** PSWrap falls back to `csc.exe` automatically. If `csc.exe` is also missing:
+The .NET Framework 4.x SDK is missing. PSWrap falls back to `csc.exe` automatically. If `csc.exe` is also missing:
 
 - Install **.NET Framework 4.7.2+ Developer Pack** from Microsoft
 - Or install **Visual Studio Build Tools** (includes `csc.exe`)
@@ -298,7 +298,7 @@ If compilation fails with an access error:
 2. If using **GUI mode** (no console), temporarily switch to **Console mode** in Settings to see error messages
 3. Ensure the PowerShell script has no syntax errors
 4. Check that all referenced modules are available on the target machine
-5. If your script uses `$PSScriptRoot` to locate files, the compiled EXE writes the script to `%TEMP%\<ExeName>\__main.ps1` and dot-sources it — `$PSScriptRoot` points to the temp extraction folder
+5. If your script uses `$PSScriptRoot` to locate files, the compiled EXE writes the script to `%TEMP%\<ExeName>\__main.ps1` and dot-sources it, so `$PSScriptRoot` points to the temp extraction folder
 6. If your script has companion files, ensure "Project Folder" is selected so they're bundled as embedded resources and extracted alongside `__main.ps1`
 
 ### Theme not applying
